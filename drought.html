@@ -210,6 +210,48 @@
 										<td>00</td>
 										<td>관심</td>
 									</tr>
+									<tr>
+										<td>하천</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
+									<tr>
+										<td>하천</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
+									<tr>
+										<td>하천</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
+									<tr>
+										<td>하천</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
+									<tr>
+										<td>하천</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
+									<tr>
+										<td>하천</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
 								</tbody>
 							</table>
 						</div>
@@ -232,17 +274,29 @@
 						<img style="width:100%; height: 100%; object-fit: cover;" src="./img/drought/dummy_03.jpg" alt="">
 					</div>
 					<div class="bottom">
-
+						<div class="slidecontainer">
+							<input type="range" min="1" max="100" value="50" class="slider">
+						</div>
 					</div>
 				</div>
 				<div class="rightWrap">
 					<div class="calendarWrap">
 						<h5>날짜선택</h5>
-						<div>
+						<div class="calendar">
 							<label for="calendar">
 								<i></i>
-								<input id="calendar" type="date" name="date">
+								<input id="calendar" type="date" name="calendar">
 							</label>
+							<!-- 달력 오늘 날짜 셋팅 -->
+							<script>
+								Date.prototype.toDateInputValue = (function() {
+									var local = new Date(this);
+									local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+									return local.toJSON().slice(0,10);
+								});
+								const inputDate = document.getElementById('calendar');
+								inputDate.value = new Date().toDateInputValue();
+							</script>
 						</div>
 						<button>검색</button>
 					</div>
@@ -300,34 +354,40 @@
 						</div>
 						<div class="itemWrap">
 							<div class="inputWrap">
-								<label for="">
-									<span></span>
-									<input type="radio" name="miniMap">
-								</label>
-								<select name="" id="">
-									<option value="대전광역시">대전광역시</option>
-									<option value="대전광역시">대전광역시</option>
-									<option value="대전광역시">대전광역시</option>
-									<option value="대전광역시">대전광역시</option>
-									<option value="대전광역시">대전광역시</option>
-								</select>
-								<select name="" id="">
-									<option value="대덕구">대덕구</option>
-									<option value="대덕구">대덕구</option>
-									<option value="대덕구">대덕구</option>
-									<option value="대덕구">대덕구</option>
-								</select>
+								<div>
+									<label>
+										<input type="radio" name="miniMap" value="행정단위" checked>
+										<span></span>
+										행정단위
+									</label>
+									<select name="" id="">
+										<option value="대전광역시">대전광역시</option>
+										<option value="대전광역시">대전광역시</option>
+										<option value="대전광역시">대전광역시</option>
+										<option value="대전광역시">대전광역시</option>
+										<option value="대전광역시">대전광역시</option>
+									</select>
+									<select name="" id="">
+										<option value="대덕구">대덕구</option>
+										<option value="대덕구">대덕구</option>
+										<option value="대덕구">대덕구</option>
+										<option value="대덕구">대덕구</option>
+									</select>
+								</div>
 
-								<label for="">
-									<span></span>
-									<input type="radio" name="miniMap">
-								</label>
-								<select name="" id="">
-									<option value="대덕구">대덕구</option>
-									<option value="대덕구">대덕구</option>
-									<option value="대덕구">대덕구</option>
-									<option value="대덕구">대덕구</option>
-								</select>
+								<div>
+									<label>
+										<input type="radio" name="miniMap" value="유역단위">
+										<span></span>
+										유역단위
+									</label>
+									<select name="" id="">
+										<option value="한강">한강</option>
+										<option value="한강">한강</option>
+										<option value="한강">한강</option>
+										<option value="한강">한강</option>
+									</select>
+								</div>
 							</div>
 							<div class="miniMap">
 								<img src="./img/drought/dummy_04.png" alt="">

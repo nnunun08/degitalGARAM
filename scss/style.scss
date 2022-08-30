@@ -1,4 +1,6 @@
 @charset "utf-8";
+$uiBlue:#0C79FE;
+$darkNavy: #1D2530;
 
 /* login */
 #login_wrap {
@@ -97,15 +99,15 @@
 }
 
 #login_fs .btn_submit:hover {
-  background: #0c79fe;
+  background: $uiBlue;
 }
 
 /* main */
 #main_map_wrap {
   background: #646464;
   position: relative;
-//   min-width: 1920px;
-//   min-height: 1080px;
+  min-width: 1920px;
+  min-height: 1080px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -115,7 +117,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  background: #1d2530;
+  background: $darkNavy;
   min-width: 90px;
   /* float: left; */
   width: 70px;
@@ -197,7 +199,7 @@ $leftSide : 200px;
 }
 #main_map_wrap .map_info_area h1 {
   padding: 25px;
-  background: #1d2530;
+  background: $darkNavy;
 }
 #main_map_wrap .map_info_area h1 a.logo {
   display: inline-block;
@@ -238,7 +240,7 @@ $leftSide : 200px;
   transition: none;
 }
 .map_info_area .left_icons {
-  background: #1d2530;
+  background: $darkNavy;
 }
 .map_info_area .left_icons.bottom_ver {
   position: fixed;
@@ -403,7 +405,7 @@ $leftSide : 200px;
   line-height: 50px;
 }
 .map_info_area .open_area .snb_list a:hover {
-  background: #0c79fe;
+  background: $uiBlue;
 }
 .map_info_area .open_area .snb_list .snb {
 }
@@ -603,13 +605,13 @@ $leftSide : 200px;
 }
 .map_api_area .tab-box li a:hover,
 .map_api_area .tab-box li a.on {
-  color: #0c79fe;
+  color: $uiBlue;
   background: #212428;
 }
 .map_api_area .tab-box.ver2 li a:hover,
 .map_api_area .tab-box.ver2 li a.on {
   color: #fff;
-  background: #0c79fe;
+  background: $uiBlue;
 }
 .map_api_area .tab-box.ver2 {
   margin-top: 20px;
@@ -740,7 +742,7 @@ $leftSide : 200px;
   display: inline-block;
   margin-left: 2px;
   font-weight: 600;
-  color: #0c79fe;
+  color: $uiBlue;
 }
 .in_box span.ico-time {
   background: url(../img/main/ico-time.png) no-repeat left -1px;
@@ -769,7 +771,6 @@ $leftSide : 200px;
 
 .open .section{
     padding-left: $leftSide;
-    transition: 0.5s;
 }
 .section {
     position: relative;
@@ -777,12 +778,17 @@ $leftSide : 200px;
     padding-left: 90px;
     background-color: #0C141E;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 
 .section.drought {
+    @mixin h5 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FCFF61;
+    }
     $sideWrapWidth:97px;
-    height: 100vh;
-
+    height: 100%;
     .container {
         width: 100%;
         height: 100%;
@@ -802,9 +808,7 @@ $leftSide : 200px;
             align-items: center;
             flex: 0 0 auto;
             .tit {
-                font-size: 18px;
-                font-weight: 700;
-                color:#FCFF61;
+                @include h5;
             }
             .date {
                 font-size: 14px;
@@ -814,6 +818,7 @@ $leftSide : 200px;
         }
 
         $trayBg:#2E3640;
+        $navy:$darkNavy;
         .leftWrap {
             display: flex;
             flex-direction: column;
@@ -834,9 +839,9 @@ $leftSide : 200px;
                 }
             }
             .itemWrap {
-                background: #1D2530;
+                background: $navy;
                 border-radius: 5px;
-                overflow: hidden;
+                overflow: auto;
                 flex: 1 0 auto;
                 .table {
                     table-layout: fixed;
@@ -904,11 +909,230 @@ $leftSide : 200px;
                 height: 95px - 24px;
                 margin-top: 12px;
                 background-color: $trayBg;
+                padding: 0 60px;
+                .slidecontainer {
+                  width: 100%; /* Width of the outside container */
+                }
+                
+                /* The slider itself */
+                .slider {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 100%; 
+                  height: 14px; 
+                  background: $darkNavy;
+                  border-radius: 10px;
+                  outline: none;
+                }                
+                .slider::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 24px; 
+                  height: 24px; 
+                  background: white url(../img/drought/slider_btn.svg) center no-repeat;
+                  border-radius: 50%;
+                  opacity: 1;
+                  cursor: pointer;
+                }
+                
+                .slider::-moz-range-thumb {
+                  width: 25px; 
+                  height: 25px;
+                  background: #04AA6D;
+                  cursor: pointer;
+                }
             }
         }
 
         .rightWrap {
-            
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+            h5 {
+              @include h5;
+            }
+            > div {
+              background-color: $trayBg;
+              padding: 12px;
+              box-sizing: border-box;
+            }
+            .calendarWrap {
+              height: 78px;
+              display: flex;
+              align-items: center;
+              .calendar {
+                flex: 1 0 auto;
+                display: block;
+                height: 41px;
+                
+                border-radius: 5px;
+                margin-right: 5px;
+                margin-left: 20px;
+                label {
+                  width: 100%;
+                  height: 100%;
+                  display: block;
+                }
+                input {
+                  // display: none;
+                  background: $darkNavy;
+                  border: 0;
+                  outline: 0;
+                  color: white;
+                  width: 100%;
+                  height: 100%;
+                  position: relative;
+                  padding-left: 40px;
+                  font-size: 16px;
+                  font-weight: 600;
+                  border-radius: 5px;
+                  font-family: 'Pretendard',Noto Sans KR,  sans-serif;
+                }
+                input::-webkit-calendar-picker-indicator {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  margin-left: 0;
+                  background: url(../img/drought/calendar_btn.svg) left 14px center no-repeat;
+                }
+              }
+              button {
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                width: 62px;
+                height: 41px;
+                background-color: $darkNavy;
+                border: 0;
+                border-radius: 5px;
+              }
+            }
+            .mesgWrap {
+              flex: 1 0 auto;
+              .itemWrap {
+                height: 215px;
+                padding: 5px 21.5px;
+                box-sizing: border-box;
+                overflow: auto;
+                background-color: $navy;
+                border-radius: 5px;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.4;
+                li {
+                  padding: 12px 0;
+                  border-bottom: 1px solid rgba(255,255,255,0.15);
+                  &:last-child {
+                    border: 0;
+                  }
+                }
+              }
+            }
+            .layerWrap {
+              .itemWrap {
+                background-color: $navy;
+                border-radius: 5px;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 16px 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                label {
+                  padding-left: 24px;
+                  position: relative;
+                  span {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border: 1.6px solid #DDDDDD;
+                    position: absolute;
+                    top: 1.5;
+                    left: 0;
+                    box-sizing: border-box;
+                    border-radius: 2px;
+                  }
+                  input:checked + span {
+                    background-color:$uiBlue;
+                    border-color: $uiBlue;
+                  }
+                }
+                input {
+                  display: none;
+                }
+              }
+            }
+            .miniMapWrap {
+              .itemWrap {
+                display: flex;
+                gap: 22px;
+                .inputWrap {
+                  padding-top: 26px;
+                  > div {
+                    margin-bottom: 50px;
+                    &:last-child{
+                      margin-bottom: 0;
+                    }
+                  }
+                  label {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: white;
+                    padding-left: 28px;
+                    position: relative;
+                    margin-bottom: 21px;
+                    display: block;
+                    span {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      display: inline-block;
+                      width: 20px;
+                      height: 20px;
+                      border: 1px solid #ddd;
+                      border-radius: 50%;
+                    }
+                    input:checked + span {
+                      border-color: $uiBlue;
+                      &::before {
+                        content: '';
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: $uiBlue;
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                      }
+                    }
+                  }      
+                  select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    outline: 0;
+                    border: 0;
+                    background:$uiBlue url(../img/drought/select_arr.svg) right 8px center no-repeat;
+                    border-radius: 5px;
+                    color: white;
+                    height: 32px;
+                    width: 100%;
+                    padding-right: 22px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    font-weight: 600;
+                    & + select {
+                      margin-top: 14px;
+                    }
+                  }
+                }
+                          
+              }
+            }
         }
 
         .sideWrap {
@@ -918,7 +1142,7 @@ $leftSide : 200px;
             bottom: 0;
             width: $sideWrapWidth;
             height: 100vh;
-            background-color: #1D2530;
+            background-color: $darkNavy;
             display: flex;
             flex-direction: column;
             justify-content: center;

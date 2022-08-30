@@ -96,13 +96,15 @@
 }
 
 #login_fs .btn_submit:hover {
-  background: #0c79fe;
+  background: #0C79FE;
 }
 
 /* main */
 #main_map_wrap {
   background: #646464;
   position: relative;
+  min-width: 1920px;
+  min-height: 1080px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -113,7 +115,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  background: #1d2530;
+  background: #1D2530;
   min-width: 90px;
   /* float: left; */
   width: 70px;
@@ -202,7 +204,7 @@
 
 #main_map_wrap .map_info_area h1 {
   padding: 25px;
-  background: #1d2530;
+  background: #1D2530;
 }
 
 #main_map_wrap .map_info_area h1 a.logo {
@@ -248,7 +250,7 @@
 }
 
 .map_info_area .left_icons {
-  background: #1d2530;
+  background: #1D2530;
 }
 
 .map_info_area .left_icons.bottom_ver {
@@ -440,7 +442,7 @@
 }
 
 .map_info_area .open_area .snb_list a:hover {
-  background: #0c79fe;
+  background: #0C79FE;
 }
 
 .map_info_area .open_area .snb_list .snb > a {
@@ -663,14 +665,14 @@
 
 .map_api_area .tab-box li a:hover,
 .map_api_area .tab-box li a.on {
-  color: #0c79fe;
+  color: #0C79FE;
   background: #212428;
 }
 
 .map_api_area .tab-box.ver2 li a:hover,
 .map_api_area .tab-box.ver2 li a.on {
   color: #fff;
-  background: #0c79fe;
+  background: #0C79FE;
 }
 
 .map_api_area .tab-box.ver2 {
@@ -825,7 +827,7 @@
   display: inline-block;
   margin-left: 2px;
   font-weight: 600;
-  color: #0c79fe;
+  color: #0C79FE;
 }
 
 .in_box span.ico-time {
@@ -859,7 +861,6 @@
 
 .open .section {
   padding-left: 200px;
-  transition: 0.5s;
 }
 
 .section {
@@ -868,10 +869,11 @@
   padding-left: 90px;
   background-color: #0C141E;
   box-sizing: border-box;
+  transition: 0.5s;
 }
 
 .section.drought {
-  height: 100vh;
+  height: 100%;
 }
 .section.drought .container {
   width: 100%;
@@ -923,7 +925,7 @@
 .section.drought .container .leftWrap .itemWrap {
   background: #1D2530;
   border-radius: 5px;
-  overflow: hidden;
+  overflow: auto;
   flex: 1 0 auto;
 }
 .section.drought .container .leftWrap .itemWrap .table {
@@ -991,6 +993,221 @@
   height: 71px;
   margin-top: 12px;
   background-color: #2E3640;
+  padding: 0 60px;
+  /* The slider itself */
+}
+.section.drought .container .centerWrap .bottom .slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+.section.drought .container .centerWrap .bottom .slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 14px;
+  background: #1D2530;
+  border-radius: 10px;
+  outline: none;
+}
+.section.drought .container .centerWrap .bottom .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: white url(../img/drought/slider_btn.svg) center no-repeat;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+}
+.section.drought .container .centerWrap .bottom .slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+.section.drought .container .rightWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section.drought .container .rightWrap h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FCFF61;
+}
+.section.drought .container .rightWrap > div {
+  background-color: #2E3640;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.section.drought .container .rightWrap .calendarWrap {
+  height: 78px;
+  display: flex;
+  align-items: center;
+}
+.section.drought .container .rightWrap .calendarWrap .calendar {
+  flex: 1 0 auto;
+  display: block;
+  height: 41px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 20px;
+}
+.section.drought .container .rightWrap .calendarWrap .calendar label {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.section.drought .container .rightWrap .calendarWrap .calendar input {
+  background: #1D2530;
+  border: 0;
+  outline: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  font-family: "Pretendard", Noto Sans KR, sans-serif;
+}
+.section.drought .container .rightWrap .calendarWrap .calendar input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  background: url(../img/drought/calendar_btn.svg) left 14px center no-repeat;
+}
+.section.drought .container .rightWrap .calendarWrap button {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  width: 62px;
+  height: 41px;
+  background-color: #1D2530;
+  border: 0;
+  border-radius: 5px;
+}
+.section.drought .container .rightWrap .mesgWrap {
+  flex: 1 0 auto;
+}
+.section.drought .container .rightWrap .mesgWrap .itemWrap {
+  height: 215px;
+  padding: 5px 21.5px;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: #1D2530;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.section.drought .container .rightWrap .mesgWrap .itemWrap li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.section.drought .container .rightWrap .mesgWrap .itemWrap li:last-child {
+  border: 0;
+}
+.section.drought .container .rightWrap .layerWrap .itemWrap {
+  background-color: #1D2530;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section.drought .container .rightWrap .layerWrap .itemWrap label {
+  padding-left: 24px;
+  position: relative;
+}
+.section.drought .container .rightWrap .layerWrap .itemWrap label span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1.6px solid #DDDDDD;
+  position: absolute;
+  top: 1.5;
+  left: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.section.drought .container .rightWrap .layerWrap .itemWrap label input:checked + span {
+  background-color: #0C79FE;
+  border-color: #0C79FE;
+}
+.section.drought .container .rightWrap .layerWrap .itemWrap input {
+  display: none;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap {
+  display: flex;
+  gap: 22px;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap {
+  padding-top: 26px;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap > div {
+  margin-bottom: 50px;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap > div:last-child {
+  margin-bottom: 0;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap label {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 21px;
+  display: block;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap label input:checked + span {
+  border-color: #0C79FE;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap label input:checked + span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0C79FE;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  border: 0;
+  background: #0C79FE url(../img/drought/select_arr.svg) right 8px center no-repeat;
+  border-radius: 5px;
+  color: white;
+  height: 32px;
+  width: 100%;
+  padding-right: 22px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+}
+.section.drought .container .rightWrap .miniMapWrap .itemWrap .inputWrap select + select {
+  margin-top: 14px;
 }
 .section.drought .container .sideWrap {
   position: fixed;
