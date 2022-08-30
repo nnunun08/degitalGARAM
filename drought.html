@@ -1,0 +1,356 @@
+
+<html lang="ko">
+ <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+	<meta property="og:site_name" content=""/>
+	<meta property="og:title" content="Digital GARAM"/>
+	<meta property="og:description" content=""/>
+	<meta property="og:image" content="./img/sum.png" />
+	<title>Digital GARAM</title>
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/circle-menu.css">
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/main.js"></script>
+ </head>
+ <body>
+	<div id="main_map_wrap" class="open">
+		<div class="map_info_area s_open">
+			<h1><a href="#" class="logo">Digital GARAM</a></h1>
+			<div class="left_icons top_ver">
+				<div class="ico_link">
+					<a href="#"><i class="ico-login"></i><span>로그인</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-layer"></i><span>레이어</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-monitor"></i><span>모니터링</span></a>
+					<div class="open_area">
+						<h3><i class="ico-monitor-b"></i>모니터링<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">다목적댐 수문정보</a>
+							</li>
+							<li>
+								<a href="#">용수정용댐 수문정보</a>
+							</li>
+							<li>
+								<a href="#">보수문정보</a>
+							</li>
+							<li class="snb">
+								<a href="#">댐 - 하천 모식도</a>
+								<ul>
+									<li><a href="#">한강</a></li>
+									<li><a href="#">금강</a></li>
+									<li><a href="#">영산강</a></li>
+									<li><a href="#">섬진강</a></li>
+									<li><a href="#">낙동강</a></li>
+								</ul>
+							</li>
+							<li class="snb">
+								<a href="#">과거 수문자료조회</a>
+								<ul>
+									<li>
+										<div class="date_box">
+											<p>조회일시</p>
+											<input type="text" placeholder="YYYY-MM-DD HH:MI">
+											<button class="s_sch">검색하기</button>
+											<div class="formbox">
+												<form></form>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-flood"></i><span>홍수</span></a>
+					<div class="open_area">
+						<h3><i class="ico-flood-b"></i>홍수<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">댐수문</a>
+								<a href="#">하천수리</a>
+								<a href="#">강우유출</a>
+								<a href="#">염분분석</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-dry"></i><span>가뭄</span></a>
+					<div class="open_area">
+						<h3><i class="ico-dry-b"></i>가뭄<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">가뭄모니터링 및 전망</a>
+								<a href="#">수원별 가뭄 모니터링</a>
+								<a href="#">가뭄대응</a>
+								<a href="#">시뮬레이션</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-cycle"></i><span>물순환</span></a>
+					<div class="open_area">
+						<h3><i class="ico-cycle-b"></i>물순환<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">물이용</a>
+								<a href="#">물순환</a>
+								<a href="#">물수지</a>
+								<a href="#">물건전성</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-cup"></i><span>수질</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-dam"></i><span>댐안전</span></a>
+				</div>
+			</div>
+
+			<div class="left_icons bottom_ver">
+				<div class="ico_link">
+					<a href="#"><i class="ico-updt"></i><span>업데이트</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-help"></i><span>도움말</span></a>
+				</div>
+				<div class="ico_link all_close_btn">
+					<a href="#"><i class="ico-close"></i><span>닫기</span></a>
+				</div>
+			</div>
+			<!-- /left_icons_btm -->
+		</div>
+
+		<section class="section drought">
+			<div class="container">
+				<div class="leftWrap">
+					<div class="top">
+						<div class="titWrap">
+							<h5 class="tit">강수 현황</h5>
+							<span class="date">2022-07-27</span>
+						</div>
+						<div class="itemWrap">
+							<img src="./img/drought/dummy_01.png" alt="">
+						</div>
+					</div>
+					<div class="middle">
+						<div class="titWrap">
+							<h5 class="tit">생공 현황</h5>
+							<span class="date">2022-07-27</span>
+						</div>
+						<div class="itemWrap">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>
+											수원
+										</th>
+										<th>
+											개수<br>
+											(개)
+										</th>
+										<th>
+											평균저수율<br>
+											(%)
+										</th>
+										<th>
+											예년저수율<br>
+											(%)
+										</th>
+										<th>
+											가뭄단계
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>다목점댐</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>용수댐</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>지차제</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
+									<tr>
+										<td>농업용</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>하천</td>
+										<td>00</td>
+										<td>00</td>
+										<td>00</td>
+										<td>관심</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="titWrap">
+							<h5 class="tit">농업 현황</h5>
+							<span class="date">2022-07-27</span>
+						</div>
+						<div class="itemWrap">
+							<img src="./img/drought/dummy_02.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="centerWrap">
+					<div class="top">
+						가뭄 모니터링 및 전망
+					</div>
+					<div class="middle">
+						<img style="width:100%; height: 100%; object-fit: cover;" src="./img/drought/dummy_03.jpg" alt="">
+					</div>
+					<div class="bottom">
+
+					</div>
+				</div>
+				<div class="rightWrap">
+					<div class="calendarWrap">
+						<h5>날짜선택</h5>
+						<div>
+							<label for="calendar">
+								<i></i>
+								<input id="calendar" type="date" name="date">
+							</label>
+						</div>
+						<button>검색</button>
+					</div>
+					<div class="mesgWrap">
+						<div class="titWrap">
+							<h5>주요상황 메세지</h5>
+						</div>
+						<div class="itemWrap">
+							<ul>
+								<li>해당지역 (유역)의 최근 1개월 누적강수량은 00mm로 예년대비 00% 낮은 수준입니다.</li>
+								<li>해당지역 (유역)의 00개 지역이 관심 이상으로 예년보다 많습니다.</li>
+								<li>해당지역 (유역)은 1개월 후 관심이상이 전달보다 00개 더 늘어날 전망입니다.</li>
+								<li>해당지역 (유역)의 최근 1개월 누적강수량은 00mm로 예년대비 00% 낮은 수준입니다.</li>
+								<li>해당지역 (유역)의 00개 지역이 관심 이상으로 예년보다 많습니다.</li>
+								<li>해당지역 (유역)은 1개월 후 관심이상이 전달보다 00개 더 늘어날 전망입니다.</li>
+								<li>해당지역 (유역)의 최근 1개월 누적강수량은 00mm로 예년대비 00% 낮은 수준입니다.</li>
+								<li>해당지역 (유역)의 00개 지역이 관심 이상으로 예년보다 많습니다.</li>
+								<li>해당지역 (유역)은 1개월 후 관심이상이 전달보다 00개 더 늘어날 전망입니다.</li>
+								<li>해당지역 (유역)의 최근 1개월 누적강수량은 00mm로 예년대비 00% 낮은 수준입니다.</li>
+								<li>해당지역 (유역)의 00개 지역이 관심 이상으로 예년보다 많습니다.</li>
+								<li>해당지역 (유역)은 1개월 후 관심이상이 전달보다 00개 더 늘어날 전망입니다.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="layerWrap">
+						<div class="titWrap">
+							<h5>가뭄 모니터링 및 전망 레이어</h5>
+						</div>
+						<div class="itemWrap">
+							<label>
+								<input type="checkbox">
+								<span></span>
+								강우 관측소
+							</label>
+							<label>
+								<input type="checkbox">
+								<span></span>
+								가뭄 예경보(기상)
+							</label>
+							<label>
+								<input type="checkbox">
+								<span></span>
+								가뭄 예경보(생공)
+							</label>
+							<label>
+								<input type="checkbox">
+								<span></span>
+								가뭄 예경보 (농업)
+							</label>
+						</div>
+					</div>
+					<div class="miniMapWrap">
+						<div class="titWrap">
+							<h5>미니맵</h5>
+						</div>
+						<div class="itemWrap">
+							<div class="inputWrap">
+								<label for="">
+									<span></span>
+									<input type="radio" name="miniMap">
+								</label>
+								<select name="" id="">
+									<option value="대전광역시">대전광역시</option>
+									<option value="대전광역시">대전광역시</option>
+									<option value="대전광역시">대전광역시</option>
+									<option value="대전광역시">대전광역시</option>
+									<option value="대전광역시">대전광역시</option>
+								</select>
+								<select name="" id="">
+									<option value="대덕구">대덕구</option>
+									<option value="대덕구">대덕구</option>
+									<option value="대덕구">대덕구</option>
+									<option value="대덕구">대덕구</option>
+								</select>
+
+								<label for="">
+									<span></span>
+									<input type="radio" name="miniMap">
+								</label>
+								<select name="" id="">
+									<option value="대덕구">대덕구</option>
+									<option value="대덕구">대덕구</option>
+									<option value="대덕구">대덕구</option>
+									<option value="대덕구">대덕구</option>
+								</select>
+							</div>
+							<div class="miniMap">
+								<img src="./img/drought/dummy_04.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sideWrap">
+					<a href=""><img src="./img/drought/Group.svg" alt=""></a>
+					<a href=""><img src="./img/drought/Group-2.svg" alt=""></a>
+					<a href=""><img src="./img/drought/Group-1.svg" alt=""></a>
+					<a href=""><img src="./img/drought/Group-3.svg" alt=""></a>
+					<a href=""><img src="./img/drought/Group-4.svg" alt=""></a>
+					<a href=""><img src="./img/drought/Group-5.svg" alt=""></a>
+				</div>
+			</div>
+		</section>
+	</div>
+ 	<script src="./js/circleMenu.min.js"></script>
+	<script>
+	  var el = '.js-menu';
+	  var myMenu = cssCircleMenu(el);
+	</script>
+
+ </body>
+</html>
