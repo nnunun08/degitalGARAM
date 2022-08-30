@@ -1,0 +1,270 @@
+
+<html lang="ko">
+ <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+	<meta property="og:site_name" content=""/>
+	<meta property="og:title" content="Digital GARAM"/>
+	<meta property="og:description" content=""/>
+	<meta property="og:image" content="./img/sum.png" />
+	<title>Digital GARAM</title>
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/circle-menu.css">
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/main.js"></script>
+ </head>
+ <body>
+	<div id="main_map_wrap" class="open">
+		<div class="map_info_area s_open">
+			<h1><a href="#" class="logo">Digital GARAM</a></h1>
+			<div class="left_icons top_ver">
+				<div class="ico_link">
+					<a href="#"><i class="ico-login"></i><span>로그인</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-layer"></i><span>레이어</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-monitor"></i><span>모니터링</span></a>
+					<div class="open_area">
+						<h3><i class="ico-monitor-b"></i>모니터링<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">다목적댐 수문정보</a>
+							</li>
+							<li>
+								<a href="#">용수정용댐 수문정보</a>
+							</li>
+							<li>
+								<a href="#">보수문정보</a>
+							</li>
+							<li class="snb">
+								<a href="#">댐 - 하천 모식도</a>
+								<ul>
+									<li><a href="#">한강</a></li>
+									<li><a href="#">금강</a></li>
+									<li><a href="#">영산강</a></li>
+									<li><a href="#">섬진강</a></li>
+									<li><a href="#">낙동강</a></li>
+								</ul>
+							</li>
+							<li class="snb">
+								<a href="#">과거 수문자료조회</a>
+								<ul>
+									<li>
+										<div class="date_box">
+											<p>조회일시</p>
+											<input type="text" placeholder="YYYY-MM-DD HH:MI">
+											<button class="s_sch">검색하기</button>
+											<div class="formbox">
+												<form></form>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-flood"></i><span>홍수</span></a>
+					<div class="open_area">
+						<h3><i class="ico-flood-b"></i>홍수<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">댐수문</a>
+								<a href="#">하천수리</a>
+								<a href="#">강우유출</a>
+								<a href="#">염분분석</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-dry"></i><span>가뭄</span></a>
+					<div class="open_area">
+						<h3><i class="ico-dry-b"></i>가뭄<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">가뭄모니터링 및 전망</a>
+								<a href="#">수원별 가뭄 모니터링</a>
+								<a href="#">가뭄대응</a>
+								<a href="#">시뮬레이션</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"  class="link-b"><i class="ico-cycle"></i><span>물순환</span></a>
+					<div class="open_area">
+						<h3><i class="ico-cycle-b"></i>물순환<span class="close">닫기</span></h3>
+						<ul class="snb_list">
+							<li>
+								<a href="#">물이용</a>
+								<a href="#">물순환</a>
+								<a href="#">물수지</a>
+								<a href="#">물건전성</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-cup"></i><span>수질</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-dam"></i><span>댐안전</span></a>
+				</div>
+			</div>
+
+			<div class="left_icons bottom_ver">
+				<div class="ico_link">
+					<a href="#"><i class="ico-updt"></i><span>업데이트</span></a>
+				</div>
+				<div class="ico_link">
+					<a href="#"><i class="ico-help"></i><span>도움말</span></a>
+				</div>
+				<div class="ico_link all_close_btn">
+					<a href="#"><i class="ico-close"></i><span>닫기</span></a>
+				</div>
+			</div>
+			<!-- /left_icons_btm -->
+		</div>
+		<div class="map_api_area">
+			<div class="map_top">
+				<div class="i-s-box flexBox ">
+					<form>
+						<input type="text" placeholder="통합검색" class="ico-sch">
+					</form>
+					<div class="tab-box">
+						<ul>
+							<li>
+								<a href="#" class="on">상세수문현황</a>
+								<a href="#">유량현황</a>
+								<a href="#">수위현황</a>
+								<a href="#">유관기관</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-box ver2">
+					<ul>
+						<li>
+							<a href="#" class="on">시/군/구</a>
+							<a href="#">대권역</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-box ver_r">
+					<ul>
+						<li class="in_box">
+							<span class="ico-time">8월 15일 (토) 3:14PM</span>
+						</li>
+						<li class="in_box">
+							<span class="ico-sunny">최고 31°	/ 최저 26°</span>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- /map_top -->
+			<div class="map_right">
+				<div class="icon-box">
+					<a href="#" title="리셋" class="ico-reset"><i>리셋</i></a>
+					<a href="#" title="이동" class="ico-move"><i>이동</i></a>
+					<a href="#" title="" class="ico-move2"><i>이동</i></a>
+					<a href="#" title="" class="ico-grp"><i>그래프</i></a>
+					<a href="#" title="" class="ico-area"><i>면적</i></a>
+					<a href="#" title="" class="ico-distance"><i>거리</i></a>
+					<a href="#" title="" class="ico-point"><i>포인트</i></a>
+					<a href="#" title="" class="ico-memo"><i>메모</i></a>
+				</div>
+				<div class="icon-box">
+					<a href="#" title="" class="ico-compass"><i>나침판</i></a>
+					<a href="#" title="" class="ico-zooin"><i>확대</i></a>
+					<a href="#" title="" class="ico-zoout"><i>축소</i></a>
+					<a href="#" title="" class="ico-earth"><i>항공뷰</i></a>
+					<a href="#" title="" class="ico-2D"><i>2D</i></a>
+					<a href="#" title="" class="ico-3D"><i>3D</i></a>
+				</div>
+				<div class="map_river_view">
+					<nav class="c-circle-menu js-menu">
+					  <button class="c-circle-menu__toggle js-menu-toggle">
+						<img src="./img/common/ico-map.png" alt="">
+					  </button>
+					  <ul class="c-circle-menu__items">
+						<li class="c-circle-menu__item">
+						  <a href="#" class="c-circle-menu__link">
+							한강
+						  </a>
+						</li>
+						<li class="c-circle-menu__item">
+						  <a href="#" class="c-circle-menu__link">
+							금강
+						  </a>
+						</li>
+						<li class="c-circle-menu__item">
+						  <a href="#" class="c-circle-menu__link">
+							낙동강
+						  </a>
+						</li>
+						<li class="c-circle-menu__item">
+						  <a href="#" class="c-circle-menu__link">
+							섬진강
+						  </a>
+						</li>
+						<li class="c-circle-menu__item">
+						  <a href="#" class="c-circle-menu__link">
+							영산강
+						  </a>
+						</li>
+					  </ul>
+					  <div class="c-circle-menu__mask js-menu-mask"></div>
+					</nav>
+
+				</div>
+			</div>
+			<!-- /map_right -->
+			<div class="map_bottom">
+				<div class="flexBox area02 ver_noList">
+					<div class="tab-box">
+						<ul>
+							<li>
+								<a href="#" class="on">수위국</a>
+								<a href="#">우량국</a>
+								<a href="#"><i class="ico-compa"></i><span>제약사항</span></a>
+								<a href="#"><i class="ico-rain"></i><span>배수시설</span></a>
+								<a href="#"><i class="ico-cctv"></i><span>CCTV</span></a>
+								<a href="#"><i class="ico-camera"></i><span>화상회의</span></a>
+								<a href="#"><i class="ico-siren"></i><span>경보국</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-box bottom_r">
+						<ul>
+							<li class="in_box">
+								<span class="ico-map">전북 순창군 동계면 어치리</span>
+								<span class="ico-loc">35’9.89’ - 6.7463”<b class="blue">N</b></span>
+								<span>-82’30.00’0.0000<b class="blue">E</b></span>
+								<span>26889486.19m <b class="blue">elev</b></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /map_bottom -->
+			<div class="map_api">
+				<img src="./img/common/login_bg.png" alt="">
+			</div>
+		</div>
+	</div>
+ 	<script src="./js/circleMenu.min.js"></script>
+	<script>
+	  var el = '.js-menu';
+	  var myMenu = cssCircleMenu(el);
+	</script>
+
+ </body>
+</html>
