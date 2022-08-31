@@ -339,6 +339,9 @@ $leftSide : 200px;
 
 .map_info_area .left_icons .ico_link > a > span {
 }
+.open_area {
+  height: 100vh;
+}
 .map_info_area .left_icons .open_area {
   position: absolute;
   top: 0;
@@ -351,19 +354,19 @@ $leftSide : 200px;
 
 .map_info_area .left_icons .open_area.on {
   left: 90px !important;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.5s, backdrop-filter 0s;
+  -moz-transition: all 0.5s, backdrop-filter 0s;
+  -ms-transition: all 0.5s, backdrop-filter 0s;
+  -o-transition: all 0.5s, backdrop-filter 0s;
+  transition: all 0.5s, backdrop-filter 0s;
 }
 .map_info_area .left_icons .open_area {
   left: -230px !important;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.5s, backdrop-filter 0s;
+  -moz-transition: all 0.5s, backdrop-filter 0s;
+  -ms-transition: all 0.5s, backdrop-filter 0s;
+  -o-transition: all 0.5s, backdrop-filter 0s;
+  transition: all 0.5s, backdrop-filter 0s;
 }
 .map_info_area.s_open .left_icons .open_area.on {
   left: 200px !important;

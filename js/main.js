@@ -26,18 +26,18 @@ $(window).on('load', function(){
 	// 사이드바 함수 선언 끝
 
 
-	var left = $('.left_icons'),
-		right = $('.map_api_area'),
-		sub = $('.open_area'),
-		lh = left.outerHeight(true),
-		rh = right.outerHeight(true);
-	if(lh < rh){
-		left.css('height', rh);
-		sub.css('height', rh);
-	}else{
-		right.css('height', lh);
-		sub.css('height', lh);
-	}
+	// var left = $('.left_icons'),
+	// 	right = $('.map_api_area'),
+	// 	sub = $('.open_area'),
+	// 	lh = left.outerHeight(true),
+	// 	rh = right.outerHeight(true);
+	// if(lh < rh){
+	// 	left.css('height', rh);
+	// 	sub.css('height', rh);
+	// }else{
+	// 	right.css('height', lh);
+	// 	sub.css('height', lh);
+	// }
 	$('.top_ver .ico_link .link-b').on('click', function(){
 			$(this).parent('.ico_link').siblings().children('.open_area').removeClass("on");
 			$(this).parent('.ico_link').siblings().children('.link-b').removeClass("on");
