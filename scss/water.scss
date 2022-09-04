@@ -41,7 +41,7 @@
                     margin-top: -1px;
                     width: 14.72px;
                     height: 12.75px;
-                    background: url(/img/water/popInfo_arr.svg) center/cover no-repeat;
+                    background: url(../img/water/popInfo_arr.svg) center/cover no-repeat;
                 }
             }
             &.red{
@@ -50,7 +50,7 @@
                         background-color: #E34545;
                     }
                     &::after {
-                        background: url(/img/water/popInfo_arr_r.svg) center/cover no-repeat;
+                        background: url(../img/water/popInfo_arr_r.svg) center/cover no-repeat;
                     }
                 }
             }
@@ -518,7 +518,7 @@
                         line-height: 17px;
                         color: #FFFFFF;
                         appearance: none;
-                        background: $TransNavy url(/img/water/select_arr.svg) right 8px center no-repeat;
+                        background: $TransNavy url(../img/water/select_arr.svg) right 8px center no-repeat;
                     }
                     button {
                         position: absolute;
@@ -667,7 +667,7 @@
                     width: 38px;
                     height: 22px;
                     display: block;
-                    background: url(/img/water/circle/cycle_arr_w.svg) center/cover no-repeat;
+                    background: url(../img/water/circle/cycle_arr_w.svg) center/cover no-repeat;
                     &.right {
                         right: -21px;
                         top: 50%;
@@ -680,7 +680,7 @@
                     }
                 }
                 .on .arrow {
-                    background: url(/img/water/circle/cycle_arr_blue.svg);
+                    background: url(../img/water/circle/cycle_arr_blue.svg);
                 }
             }
 
