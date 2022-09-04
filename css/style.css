@@ -1294,7 +1294,7 @@ select {
 }
 .waterStorage .toggleBtn label::before {
   content: "";
-  background: url(/img/water/toggleCheck.svg) center/cover no-repeat;
+  background: url(../img/water/toggleCheck.svg) center/cover no-repeat;
   width: 14px;
   height: 14px;
   position: absolute;

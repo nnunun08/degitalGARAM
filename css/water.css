@@ -1092,13 +1092,13 @@ select {
   margin-top: -1px;
   width: 14.72px;
   height: 12.75px;
-  background: url(/img/water/popInfo_arr.svg) center/cover no-repeat;
+  background: url(../img/water/popInfo_arr.svg) center/cover no-repeat;
 }
 .damPosition .dam.red .popInfo span {
   background-color: #E34545;
 }
 .damPosition .dam.red .popInfo::after {
-  background: url(/img/water/popInfo_arr_r.svg) center/cover no-repeat;
+  background: url(../img/water/popInfo_arr_r.svg) center/cover no-repeat;
 }
 .damPosition .dam.ac {
   border: 4px solid #0C79FE;
@@ -1782,7 +1782,7 @@ select {
   line-height: 17px;
   color: #FFFFFF;
   appearance: none;
-  background: rgba(23, 23, 23, 0.3) url(/img/water/select_arr.svg) right 8px center no-repeat;
+  background: rgba(23, 23, 23, 0.3) url(../img/water/select_arr.svg) right 8px center no-repeat;
 }
 .section.water.detailView .panel05 .panelItem .titWrap button {
   position: absolute;
@@ -1954,7 +1954,7 @@ select {
   width: 38px;
   height: 22px;
   display: block;
-  background: url(/img/water/circle/cycle_arr_w.svg) center/cover no-repeat;
+  background: url(../img/water/circle/cycle_arr_w.svg) center/cover no-repeat;
 }
 .section.water.detailView .map_api .cycleWrap .arrow.right {
   right: -21px;
@@ -1967,7 +1967,7 @@ select {
   transform: rotate(90deg);
 }
 .section.water.detailView .map_api .cycleWrap .on .arrow {
-  background: url(/img/water/circle/cycle_arr_blue.svg);
+  background: url(../img/water/circle/cycle_arr_blue.svg);
 }
 
 /*# sourceMappingURL=water.css.map */
