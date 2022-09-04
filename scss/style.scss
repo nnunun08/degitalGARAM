@@ -1,6 +1,5 @@
-@charset "utf-8";
-$uiBlue:#0C79FE;
-$darkNavy: #1D2530;
+@import "common";
+
 
 /* login */
 #login_wrap {
@@ -104,7 +103,7 @@ $darkNavy: #1D2530;
 
 /* main */
 #main_map_wrap {
-  background: #646464;
+  background-color: #010101;
   position: relative;
   min-width: 1920px;
   min-height: 1080px;
@@ -162,18 +161,132 @@ $leftSide : 200px;
   overflow: hidden;
 }
 .map_api_area .map_top {
-  position: fixed;
+  width:calc(100% - $secPadding - $secPadding-r);
+  position: absolute;
   z-index: 999;
-  left: 110px;
+  left: $secPadding !important;
   top: 22px;
 	-webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  .ver2 ul {
+    &::after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+
+  .miniMap {
+    @include transTray;
+    padding: 20px 28px;
+    box-sizing: border-box;
+    min-width: 220px;
+    min-height: 154px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+    img {
+      display: none;
+      &.on {
+        display: block;
+      }
+    }
+
+  }
 }
+
+.bottom_r {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.waterStorage {
+  background-color: $TransNavy;
+  backdrop-filter: blur(46px);
+  border-radius: 10px;
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  .top {
+    justify-content: space-between;
+  }
+  h4 {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: white;
+  }
+  .toggleBtn {
+    input {
+      display:none;
+    }
+    label {
+      cursor: pointer;
+      position: relative;
+      display: block;
+      width: 28px;
+      height: 18px;
+      background-color: $uiBlue;
+      border-radius: 18px;
+      &::before {
+        content: '';
+        background: url(/img/water/toggleCheck.svg) center/cover no-repeat;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        transition: all 0.2s;
+      }
+    }
+    input:checked + label::before {
+      left: 12px;
+    }
+  }
+  .tray {
+    width: 180px;
+    background-color: $darkNavy;
+    border-radius: 10px;
+    padding: 16px 12px;
+    color: #ddd;
+    h5 {
+      margin-right: 30px;
+    }
+    ul li {
+      display: flex;
+      gap: 30px;
+      &::before {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      &:nth-child(1)::before {background-color: #BBD0ED;}
+      &:nth-child(2)::before {background-color: #BBD0ED;}
+      &:nth-child(3)::before {background-color: #83B0CE;}
+      &:nth-child(4)::before {background-color: #3994CE;}
+      &:nth-child(5)::before {background-color: #1366AB;}
+    }
+    li + li {
+      margin-top: 6px;
+    }
+  }
+}
+
+
 .open .map_api_area .map_top {
-  left: 237px;
+  left: 14px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -190,12 +303,13 @@ $leftSide : 200px;
   transition: all 0.5s;
 }
 .map_api_area .map_top.on {
-  left: 358px;
+  width: calc(100% - 14px - 36px - 230px);
+  left: 230px + 14px !important;
 }
 .map_api_area .map_top .tab-box.ver_r {
-  position: fixed;
-  right: 28px;
-  top: 22px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 #main_map_wrap .map_info_area h1 {
   padding: 25px;
@@ -516,13 +630,14 @@ $leftSide : 200px;
 }
 
 .map_api_area .map_bottom {
-  position: fixed;
+  position: absolute;
   bottom: 25px;
   z-index: 999;
-  left: 110px;
+  left: $secPadding;
+  width: calc(100% - $secPadding - $secPadding-r);
 }
 .open .map_api_area .map_bottom {
-  left: 237px;
+  left: 14px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -530,10 +645,18 @@ $leftSide : 200px;
   transition: all 0.5s;
 }
 .map_api_area .map_bottom {
-  left: 110px;
+  left: $secPadding;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  .flexBox.area02 {
+    width: 100%;
+  }
 }
 .open .map_api_area .map_bottom.on {
-  left: 468px;
+  left: 244px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -541,13 +664,14 @@ $leftSide : 200px;
   transition: all 0.5s;
 }
 .map_api_area .map_bottom.on {
-  left: 358px;
+  left: 230px + 14px !important;
+  width: calc(100% - 14px - 36px - 230px);
 }
 .map_api_area .tab-box li a {
   display: inline-flex;
   color: #a0a0a0;
   padding: 0 15px;
-  background: rgba(23, 23, 23, 0.3);
+  background: $TransNavy;
   backdrop-filter: blur(16px);
   line-height: 42px;
   font-size: 14px;
@@ -629,7 +753,7 @@ $leftSide : 200px;
   z-index: 999;
 }
 .map_api_area .map_right .icon-box {
-  background: rgba(23, 23, 23, 0.3);
+  background: $TransNavy;
   /* BG Blur */
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
@@ -647,46 +771,46 @@ $leftSide : 200px;
   background-position: center center !important;
 }
 .map_api_area .map_right .ico-reset {
-  background: url(../img/main/ico-reset.png) no-repeat;
+  background: url(../img/main/ico-reset.svg) no-repeat;
 }
 .map_api_area .map_right .ico-move {
-  background: url(../img/main/ico-move.png) no-repeat;
+  background: url(../img/main/ico-move.svg) no-repeat;
 }
 .map_api_area .map_right .ico-move2 {
-  background: url(../img/main/ico-move2.png) no-repeat;
+  background: url(../img/main/ico-move2.svg) no-repeat;
 }
 .map_api_area .map_right .ico-grp {
-  background: url(../img/main/ico-grp.png) no-repeat;
+  background: url(../img/main/ico-grp.svg) no-repeat;
 }
 .map_api_area .map_right .ico-area {
-  background: url(../img/main/ico-area.png) no-repeat;
+  background: url(../img/main/ico-area.svg) no-repeat;
 }
 .map_api_area .map_right .ico-distance {
-  background: url(../img/main/ico-distance.png) no-repeat;
+  background: url(../img/main/ico-distance.svg) no-repeat;
 }
 .map_api_area .map_right .ico-point {
-  background: url(../img/main/ico-point.png) no-repeat;
+  background: url(../img/main/ico-point.svg) no-repeat;
 }
 .map_api_area .map_right .ico-memo {
-  background: url(../img/main/ico-memo.png) no-repeat;
+  background: url(../img/main/ico-memo.svg) no-repeat;
 }
 .map_api_area .map_right .ico-compass {
-  background: url(../img/main/ico-compass.png) no-repeat;
+  background: url(../img/main/ico-compass.svg) no-repeat;
 }
 .map_api_area .map_right .ico-zooin {
-  background: url(../img/main/ico-zooin.png) no-repeat;
+  background: url(../img/main/ico-zooin.svg) no-repeat;
 }
 .map_api_area .map_right .ico-zoout {
-  background: url(../img/main/ico-zoout.png) no-repeat;
+  background: url(../img/main/ico-zoout.svg) no-repeat;
 }
 .map_api_area .map_right .ico-earth {
-  background: url(../img/main/ico-earth.png) no-repeat;
+  background: url(../img/main/ico-earth.svg) no-repeat;
 }
 .map_api_area .map_right .ico-2D {
-  background: url(../img/main/ico-2D.png) no-repeat;
+  background: url(../img/main/ico-2D.svg) no-repeat;
 }
 .map_api_area .map_right .ico-3D {
-  background: url(../img/main/ico-3D.png) no-repeat;
+  background: url(../img/main/ico-3D.svg) no-repeat;
 }
 .map_api_area .map_right .icon-box a i {
   display: inline;
@@ -709,22 +833,26 @@ $leftSide : 200px;
 .map_api img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .i-s-box input {
   padding: 12px 32px 12px 41px;
   width: 220px;
   height: 42px;
-  background: rgba(23, 23, 23, 0.3) url(../img/main/ico_sch_s.png) no-repeat
+  background: $TransNavy url(../img/main/ico_sch_s.svg) no-repeat
     16px 12px;
   backdrop-filter: blur(16px);
   border-radius: 70px;
   border: 0;
   color: #fff;
   margin-right: 24px;
+  &::placeholder {
+    color: #fff;
+  }
 }
 
 .in_box {
-  background: rgba(23, 23, 23, 0.3);
+  background: $TransNavy;
   backdrop-filter: blur(16px);
   border-radius: 70px;
   height: 42px;
@@ -748,33 +876,31 @@ $leftSide : 200px;
   color: $uiBlue;
 }
 .in_box span.ico-time {
-  background: url(../img/main/ico-time.png) no-repeat left -1px;
+  background: url(../img/main/ico-time.svg) no-repeat left -1px;
   margin-left: 16px;
   padding-left: 26px;
 }
 .in_box span.ico-sunny {
-  background: url(../img/main/ico-sunny.png) no-repeat left -1px;
+  background: url(../img/main/ico-sunny.svg) no-repeat left -1px;
   margin-left: 16px;
   padding-left: 27px;
 }
 .in_box span.ico-map {
-  background: url(../img/main/ico-map.png) no-repeat left center;
+  background: url(../img/main/ico-map.svg) no-repeat left center;
   margin-left: 16px;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 .in_box span.ico-loc {
-  background: url(../img/main/ico-loc.png) no-repeat left -1px;
+  background: url(../img/main/ico-loc.svg) no-repeat left -1px;
   padding-left: 24px;
   margin-left: 8px;
-}
-.bottom_r {
-  position: fixed;
-  right: 22px;
 }
 
 .open .section{
     padding-left: $leftSide;
 }
+$sideWrapWidth:97px;
+
 .section {
     position: relative;
     width: 100vw;
@@ -785,12 +911,12 @@ $leftSide : 200px;
 }
 
 .section.drought {
+
     @mixin h5 {
       font-size: 18px;
       font-weight: 700;
       color: #FCFF61;
     }
-    $sideWrapWidth:97px;
     padding-right: $sideWrapWidth;
     height: 100%;
     .container {
