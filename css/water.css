@@ -1107,6 +1107,101 @@ select {
   filter: drop-shadow(0px 4px 26px rgba(12, 121, 254, 0.9)) drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.35));
 }
 
+.calendarWrap {
+  height: 78px;
+  display: flex;
+  align-items: center;
+}
+.calendarWrap .calendar {
+  flex: 1 0 auto;
+  display: block;
+  height: 41px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 20px;
+}
+.calendarWrap .calendar label {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.calendarWrap .calendar input {
+  background: #1D2530;
+  border: 0;
+  outline: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  font-family: "Pretendard", Noto Sans KR, sans-serif;
+}
+.calendarWrap .calendar input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  background: url(../img/drought/calendar_btn.svg) left 14px center no-repeat;
+}
+.calendarWrap button {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  width: 62px;
+  height: 41px;
+  background-color: #1D2530;
+  border: 0;
+  border-radius: 5px;
+}
+
+.calendarWrap {
+  background-color: rgba(23, 23, 23, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(46px);
+  padding: 5px 18px;
+  height: auto;
+}
+.calendarWrap h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  color: white;
+  margin-right: 10px;
+}
+.calendarWrap .fromToWrap {
+  background-color: #1D2530;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 32px;
+  padding: 0 2px;
+}
+.calendarWrap .fromToWrap .calendar {
+  margin: 0;
+  height: 32px;
+}
+.calendarWrap .fromToWrap .calendar input {
+  font-size: 14px;
+  width: 128px;
+  padding-left: 32px;
+  letter-spacing: 0.05em;
+}
+.calendarWrap .fromToWrap .calendar input::-webkit-calendar-picker-indicator {
+  background: url(../img/drought/calendar_btn.svg) left 8px center no-repeat;
+}
+.calendarWrap button {
+  margin-left: 7px;
+  border-radius: 10px;
+  width: 45px;
+  height: 32px;
+}
+
 .section.water {
   background-color: #010101;
 }
@@ -1264,7 +1359,7 @@ select {
   margin-top: 4px;
 }
 .section.water.detailView .detailPanel {
-  position: fixed;
+  position: absolute;
   top: 84px;
   right: 88px;
   z-index: 999;
@@ -1451,101 +1546,6 @@ select {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 19px;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap {
-  height: 78px;
-  display: flex;
-  align-items: center;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .calendar {
-  flex: 1 0 auto;
-  display: block;
-  height: 41px;
-  border-radius: 5px;
-  margin-right: 5px;
-  margin-left: 20px;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .calendar label {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .calendar input {
-  background: #1D2530;
-  border: 0;
-  outline: 0;
-  color: white;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  padding-left: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 5px;
-  font-family: "Pretendard", Noto Sans KR, sans-serif;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .calendar input::-webkit-calendar-picker-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-left: 0;
-  background: url(../img/drought/calendar_btn.svg) left 14px center no-repeat;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap button {
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  width: 62px;
-  height: 41px;
-  background-color: #1D2530;
-  border: 0;
-  border-radius: 5px;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap {
-  background-color: rgba(23, 23, 23, 0.3);
-  border-radius: 10px;
-  backdrop-filter: blur(46px);
-  margin-bottom: 11px;
-  padding: 5px 18px;
-  height: auto;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap h5 {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 17px;
-  letter-spacing: 0.05em;
-  color: white;
-  margin-right: 10px;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .fromToWrap {
-  background-color: #1D2530;
-  display: flex;
-  overflow: hidden;
-  border-radius: 10px;
-  height: 32px;
-  padding: 0 2px;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .fromToWrap .calendar {
-  margin: 0;
-  height: 32px;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .fromToWrap .calendar input {
-  font-size: 14px;
-  width: 128px;
-  padding-left: 32px;
-  letter-spacing: 0.05em;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap .fromToWrap .calendar input::-webkit-calendar-picker-indicator {
-  background: url(../img/drought/calendar_btn.svg) left 8px center no-repeat;
-}
-.section.water.detailView .ver_r .searchWrap .calendarWrap button {
-  margin-left: 7px;
-  border-radius: 10px;
-  width: 45px;
-  height: 32px;
 }
 .section.water.detailView .ver_r .searchWrap .tab a {
   min-width: 84px;
@@ -1581,7 +1581,7 @@ select {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #FED70C;
 }
 .section.water.detailView .panel04 .panel_close {
   position: absolute;
@@ -1617,7 +1617,7 @@ select {
   align-items: center;
 }
 .section.water.detailView .panel05 {
-  position: fixed;
+  position: absolute;
   right: 108px;
   top: 97px;
   z-index: 999;
@@ -1629,101 +1629,6 @@ select {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 19px;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap {
-  height: 78px;
-  display: flex;
-  align-items: center;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .calendar {
-  flex: 1 0 auto;
-  display: block;
-  height: 41px;
-  border-radius: 5px;
-  margin-right: 5px;
-  margin-left: 20px;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .calendar label {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .calendar input {
-  background: #1D2530;
-  border: 0;
-  outline: 0;
-  color: white;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  padding-left: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 5px;
-  font-family: "Pretendard", Noto Sans KR, sans-serif;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .calendar input::-webkit-calendar-picker-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-left: 0;
-  background: url(../img/drought/calendar_btn.svg) left 14px center no-repeat;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap button {
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  width: 62px;
-  height: 41px;
-  background-color: #1D2530;
-  border: 0;
-  border-radius: 5px;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap {
-  background-color: rgba(23, 23, 23, 0.3);
-  border-radius: 10px;
-  backdrop-filter: blur(46px);
-  margin-bottom: 11px;
-  padding: 5px 18px;
-  height: auto;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap h5 {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 17px;
-  letter-spacing: 0.05em;
-  color: white;
-  margin-right: 10px;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .fromToWrap {
-  background-color: #1D2530;
-  display: flex;
-  overflow: hidden;
-  border-radius: 10px;
-  height: 32px;
-  padding: 0 2px;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .fromToWrap .calendar {
-  margin: 0;
-  height: 32px;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .fromToWrap .calendar input {
-  font-size: 14px;
-  width: 128px;
-  padding-left: 32px;
-  letter-spacing: 0.05em;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap .fromToWrap .calendar input::-webkit-calendar-picker-indicator {
-  background: url(../img/drought/calendar_btn.svg) left 8px center no-repeat;
-}
-.section.water.detailView .panel05 .searchWrap .calendarWrap button {
-  margin-left: 7px;
-  border-radius: 10px;
-  width: 45px;
-  height: 32px;
 }
 .section.water.detailView .panel05 .searchWrap .tab a {
   min-width: 84px;
@@ -1753,6 +1658,7 @@ select {
   background-color: rgba(23, 23, 23, 0.3);
   border-radius: 10px;
   backdrop-filter: blur(46px);
+  min-width: 350px;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(60.8824px);
   padding: 14px;
@@ -1769,6 +1675,7 @@ select {
   font-size: 14px;
   line-height: 17px;
   margin-right: 8px;
+  color: #FED70C;
 }
 .section.water.detailView .panel05 .panelItem .titWrap select {
   border: 0;
@@ -1824,6 +1731,7 @@ select {
   flex-direction: column;
   gap: 10px;
   flex: 1 0 0;
+  width: 50%;
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
@@ -1834,6 +1742,7 @@ select {
 .section.water.detailView .panel05 .panelItem .table .left > div,
 .section.water.detailView .panel05 .panelItem .table .right > div {
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .section.water.detailView .panel05 .panelItem .table .tit {
   font-weight: 800;
@@ -1955,6 +1864,11 @@ select {
   height: 22px;
   display: block;
   background: url(../img/water/circle/cycle_arr_w.svg) center/cover no-repeat;
+}
+.section.water.detailView .map_api .cycleWrap .arrow.left {
+  left: -17px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
 }
 .section.water.detailView .map_api .cycleWrap .arrow.right {
   right: -21px;

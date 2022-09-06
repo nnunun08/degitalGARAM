@@ -310,6 +310,9 @@ $leftSide : 200px;
   position: absolute;
   right: 0;
   top: 0;
+  // position: fixed;
+  // right: 36px;
+  // top: 22px;
 }
 #main_map_wrap .map_info_area h1 {
   padding: 25px;
@@ -688,6 +691,9 @@ $leftSide : 200px;
   align-items: center;
   float: left;
   margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .map_api_area .tab-box li a i {
   display: inline-block;
@@ -747,9 +753,10 @@ $leftSide : 200px;
   line-height: 32px;
 }
 .map_api_area .map_right {
-  position: fixed;
+  position: absolute;
   right: 36px;
-  top: 86px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 999;
 }
 .map_api_area .map_right .icon-box {

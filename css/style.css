@@ -1796,6 +1796,9 @@ select {
   float: left;
   margin-right: 8px;
 }
+.map_api_area .tab-box li:last-child {
+  margin-right: 0;
+}
 
 .map_api_area .tab-box li a i {
   display: inline-block;
@@ -1870,9 +1873,10 @@ select {
 }
 
 .map_api_area .map_right {
-  position: fixed;
+  position: absolute;
   right: 36px;
-  top: 86px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 999;
 }
 

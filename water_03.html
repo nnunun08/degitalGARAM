@@ -163,7 +163,26 @@
 
                         <div class="tab-box ver_r">
                             <ul>
-
+                                <li class="searchWrap">
+                                    <div class="calendarWrap">
+                                        <h5>기간 조회</h5>
+                                        <div class="fromToWrap">
+                                            <div class="calendar">
+                                                <label for="calendar">
+                                                    <i></i>
+                                                    <input id="calendar" type="date" name="calendar" placeholder="시작 일시">
+                                                </label>
+                                            </div>
+                                            <div class="calendar">
+                                                <label for="calendar">
+                                                    <i></i>
+                                                    <input id="calendar" type="date" name="calendar" placeholder="마지막 일시">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button>검색</button>
+                                    </div>
+                                </li>
                                 <li class="in_box">
                                     <span class="ico-time">8월 15일 (토) 3:14PM</span>
                                 </li>
@@ -198,31 +217,11 @@
                     <!-- /map_right -->
 
                     <div class="panel05 detailViewItem">
-                        <div class="searchWrap">
-                            <div class="calendarWrap">
-                                <h5>기간 조회</h5>
-                                <div class="fromToWrap">
-                                    <div class="calendar">
-                                        <label for="calendar">
-                                            <i></i>
-                                            <input id="calendar" type="date" name="calendar" placeholder="시작 일시" required pattern="\d{2}-\d{2}-\d{2}">
-                                        </label>
-                                    </div>
-                                    <div class="calendar">
-                                        <label for="calendar">
-                                            <i></i>
-                                            <input id="calendar" type="date" name="calendar" placeholder="마지막 일시">
-                                        </label>
-                                    </div>
-                                </div>
-                                <button>검색</button>
-                            </div>
-                        </div>
 
                         <div class="panelItem">
                             <div class="titWrap">
                                 <h5>4009 섬진강하류</h5>
-                                <button>내보내기</button>
+                                <button>다운로드</button>
                             </div>
                             <div class="table">
                                 <div class="left">
@@ -253,7 +252,7 @@
                     <div class="panel04 water03 detailViewItem" style="top:auto;bottom:108px;left:50%;transform:translateX(-50%);">
                         <div class="flex">
                             <h5>송정수위표</h5>
-                            <button class="exportBtn">내보내기</button>
+                            <button class="exportBtn">다운로드</button>
                         </div>
                         <div class="graph">
                             <img src="./img/water/dummy_graph_panel_04.png" alt="">

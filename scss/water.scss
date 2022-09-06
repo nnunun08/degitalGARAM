@@ -64,6 +64,48 @@
     }
 }
 @include damPosition;
+@include calendarWrap;
+.calendarWrap {
+    @include transTray;
+    // margin-bottom: 11px;
+    padding: 5px 18px;
+    height: auto;
+    h5 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;                        
+        letter-spacing: 0.05em;
+        color: white;
+        margin-right: 10px;
+    }
+    .fromToWrap {
+        background-color: $darkNavy;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 32px;
+        padding: 0 2px;
+        .calendar {
+            margin: 0;
+            height: 32px;
+            input {
+                font-size: 14px;
+                width: 128px;
+                padding-left: 32px;
+                letter-spacing: 0.05em;
+            }
+            input::-webkit-calendar-picker-indicator {
+                background: url(../img/drought/calendar_btn.svg) left 8px center no-repeat;
+            }
+        }
+    }
+    button {
+        margin-left: 7px;
+        border-radius: 10px;
+        width: 45px;
+        height: 32px;
+    }
+}
 
 .section.water {
     background-color: #010101;
@@ -106,49 +148,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin-right: 19px;
-            @include calendarWrap;
-            .calendarWrap {
-                @include transTray;
-                margin-bottom: 11px;
-                padding: 5px 18px;
-                height: auto;
-                h5 {
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 17px;                        
-                    letter-spacing: 0.05em;
-                    color: white;
-                    margin-right: 10px;
-                }
-                .fromToWrap {
-                    background-color: $darkNavy;
-                    display: flex;
-                    overflow: hidden;
-                    border-radius: 10px;
-                    height: 32px;
-                    padding: 0 2px;
-                    .calendar {
-                        margin: 0;
-                        height: 32px;
-                        input {
-                            font-size: 14px;
-                            width: 128px;
-                            padding-left: 32px;
-                            letter-spacing: 0.05em;
-                        }
-                        input::-webkit-calendar-picker-indicator {
-                            background: url(../img/drought/calendar_btn.svg) left 8px center no-repeat;
-                        }
-                    }
-                }
-                button {
-                    margin-left: 7px;
-                    border-radius: 10px;
-                    width: 45px;
-                    height: 32px;
-                }
-            }
+            // margin-right: 19px;
             .tab {
                 a {
                     min-width: 84px;
@@ -312,7 +312,7 @@
         }
 
         .detailPanel {
-            position: fixed;
+            position: absolute;
             top: 84px;
             right: 88px;
             z-index: 999;
@@ -434,7 +434,7 @@
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 24px;
-                color: #FFFFFF;
+                color: $colorYellow;
             }
             .panel_close {
                 position: absolute;
@@ -474,7 +474,7 @@
         
 
         .panel05 {
-            position: fixed;
+            position: absolute;
             right: 108px;
             top: 97px;
             z-index: 999;
@@ -491,6 +491,7 @@
             }
             .panelItem { 
                 @include transTray;
+                min-width: 350px;
                 background-color: rgba(255, 255, 255, 0.2);
                 backdrop-filter: blur(60.8824px);
                 padding: 14px;
@@ -505,6 +506,7 @@
                         font-size: 14px;
                         line-height: 17px;
                         margin-right: 8px;
+                        color: $colorYellow;
                     }
                     select {
                         border: 0;
@@ -560,6 +562,7 @@
                         flex-direction: column;
                         gap: 10px;
                         flex: 1 0 0;
+                        width: 50%;
                         font-weight: 600;
                         font-size: 13px;
                         line-height: 16px;
@@ -568,6 +571,7 @@
                         white-space: nowrap;
                         > div {
                             text-overflow: ellipsis;
+                            overflow: hidden;
                         }
                     }
                     .tit {
@@ -668,6 +672,11 @@
                     height: 22px;
                     display: block;
                     background: url(../img/water/circle/cycle_arr_w.svg) center/cover no-repeat;
+                    &.left {
+                        left: -17px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(180deg);
+                    }
                     &.right {
                         right: -21px;
                         top: 50%;
