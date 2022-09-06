@@ -245,7 +245,28 @@
                                 </div>
                             </div>
                             <div class="graph1">
-                                <img src="./img/water/dummy_graph_line.png" alt="">
+
+                                <!-- 그래프 토글 시작 -->
+                                <div class="dummyGraph">
+                                    <div id="controlBox" class="controlBox">
+                                        <span onclick="toggle(0)">합계</span>
+                                        <span onclick="toggle(1)">댐</span>
+                                        <span onclick="toggle(2)">농업용 저수지</span>
+                                    </div>
+                                    <ul>
+                                        <li class="graphItem on"><div class="imgDiv"></div></li>
+                                        <li class="graphItem on"><div class="imgDiv"></div></li>
+                                        <li class="graphItem on"><div class="imgDiv"></div></li>
+                                    </ul>
+                                </div>
+                                <script>
+                                    const toggleBtn = document.getElementById('controlBox').getElementsByTagName('span');
+                                    const listWrap = document.getElementsByClassName('graphItem');
+                                    function toggle(el) {
+                                        listWrap[el].classList.toggle('on');
+                                    }
+                                </script>
+                                <!-- 그래프 토글 끝 -->
                             </div>
                             <div class="graph2">
                                 <img src="./img/water/dummy_graph_pie.png" alt="">
