@@ -28,17 +28,17 @@
  */
 .c-circle-menu {
   position: absolute;
-  bottom: 85px;
-  right: 33px;
+	bottom: 85px;
+    right: 33px;
   z-index: 1000;
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
 
-.c-circle-menu.is-active {
-  width: 110px;
-  height: 110px;
+.c-circle-menu.is-active{
+	    width: 110px;
+    height: 110px;
 }
 
 .c-circle-menu__items {
@@ -64,39 +64,41 @@
   transition: transform, opacity;
   transition: transform, opacity, -webkit-transform;
   -webkit-transition-duration: 0.3s, 0.3s;
-  transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.35, -0.59, 0.47, 0.97);
-  transition-timing-function: cubic-bezier(0.35, -0.59, 0.47, 0.97);
-  background: rgba(29, 37, 48, 0.5);
-  backdrop-filter: blur(16px);
+          transition-timing-function: cubic-bezier(0.35, -0.59, 0.47, 0.97);
+background: rgba(29, 37, 48, 0.5);
+backdrop-filter: blur(16px);
+
 }
+
 
 /**
  * Transisition delays at the default state.
  */
 .c-circle-menu__item:nth-child(1) {
   -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .c-circle-menu__item:nth-child(2) {
   -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .c-circle-menu__item:nth-child(3) {
   -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .c-circle-menu__item:nth-child(4) {
   -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .c-circle-menu__item:nth-child(5) {
   -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 /**
@@ -108,43 +110,53 @@
  */
 .c-circle-menu.is-active .c-circle-menu__item {
   -webkit-transition-timing-function: cubic-bezier(0.35, 0.03, 0.47, 1.59);
-  transition-timing-function: cubic-bezier(0.35, 0.03, 0.47, 1.59);
+          transition-timing-function: cubic-bezier(0.35, 0.03, 0.47, 1.59);
 }
 
 .c-circle-menu.is-active .c-circle-menu__item:nth-child(1) {
   -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  -webkit-transform: translate(-66px, 60px);
-  transform: translate(-66px, 60px);
+          transition-delay: 0s;
+  -webkit-transform:translate(-66px, 60px);
+          transform: translate(-66px, 60px);
 }
+
+
 
 .c-circle-menu.is-active .c-circle-menu__item:nth-child(2) {
   -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
+          transition-delay: 0.1s;
   -webkit-transform: translate(-58px, 11px);
-  transform: translate(-58px, 11px);
+          transform: translate(-58px, 11px)
 }
+
+
 
 .c-circle-menu.is-active .c-circle-menu__item:nth-child(3) {
   -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-  -webkit-transform: translate(-37px, -30px);
-  transform: translate(-37px, -30px);
+          transition-delay: 0.2s;
+  -webkit-transform:translate(-37px, -30px);
+          transform:translate(-37px, -30px)
 }
+
+
 
 .c-circle-menu.is-active .c-circle-menu__item:nth-child(4) {
   -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-  -webkit-transform: translate(0px, -59px);
-  transform: translate(0px, -59px);
+          transition-delay: 0.3s;
+  -webkit-transform:translate(0px, -59px);
+          transform: translate(0px, -59px)
 }
+
+
 
 .c-circle-menu.is-active .c-circle-menu__item:nth-child(5) {
   -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-  -webkit-transform: translate(50px, -70px);
-  transform: translate(50px, -70px);
+          transition-delay: 0.4s;
+  -webkit-transform:translate(50px, -70px);
+          transform:translate(50px, -70px)
 }
+
+
 
 /**
  * Apart from the transform properties, we'll also make sure the items get
@@ -164,21 +176,22 @@ a.c-circle-menu__link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  line-height: 42px;
-  color: #FFF;
-  text-align: center;
-  font-size: 12px;
+  line-height:42px;
+  color:#FFF;
+  text-align:center;
+  font-size:12px;
+}
+a.c-circle-menu__link:hover{
+	color: #0C79FE;
 }
 
-a.c-circle-menu__link:hover {
-  color: #0C79FE;
-}
 
 .c-circle-menu__link img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 
 /* -----------------------------------------------------------------------------
 
@@ -201,7 +214,7 @@ a.c-circle-menu__link:hover {
   height: 70px;
   border-radius: 50%;
   background: rgba(29, 37, 48, 0.5);
-  backdrop-filter: blur(16px);
+	backdrop-filter: blur(16px);
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   /* reset some browser defaults */
@@ -213,8 +226,8 @@ a.c-circle-menu__link:hover {
   box-shadow: none;
 }
 
-.c-circle-menu__toggle img {
-  width: 31px;
+.c-circle-menu__toggle img{
+	width:31px;
 }
 
 .c-circle-menu__toggle:hover,
@@ -223,15 +236,21 @@ a.c-circle-menu__link:hover {
   outline: none;
 }
 
+
+
+
+
+
+
 /* button active state */
 .c-circle-menu__toggle.is-active {
-  width: 110px;
-  height: 110px;
+	width:110px;
+	height:110px;
+}
+.c-circle-menu__toggle.is-active img{
+	width:auto;
 }
 
-.c-circle-menu__toggle.is-active img {
-  width: auto;
-}
 
 /* -----------------------------------------------------------------------------
 
@@ -243,5 +262,3 @@ a.c-circle-menu__link:hover {
  * DOM via JavaScript. It simply acts as an overlay to draw attention to the
  * menu when it is active. It also uses the .is-acvite state class.
  */
-
-/*# sourceMappingURL=circle-menu.css.map */
