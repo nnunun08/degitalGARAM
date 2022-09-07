@@ -1266,6 +1266,7 @@ select {
   filter: drop-shadow(0px 4px 26px rgba(12, 121, 254, 0.9)) drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.35));
 }
 .section.water.detailView .damReport {
+  display: none;
   margin-top: 31px;
   width: 580px;
   box-sizing: border-box;
@@ -1273,6 +1274,9 @@ select {
   background: rgba(23, 23, 23, 0.3);
   backdrop-filter: blur(46px);
   border-radius: 10px;
+}
+.section.water.detailView .damReport.on {
+  display: block;
 }
 .section.water.detailView .damReport h3 {
   font-weight: 700;
@@ -1536,6 +1540,10 @@ select {
   backdrop-filter: blur(46px);
   padding: 12px;
   padding-bottom: 8px;
+  display: none;
+}
+.section.water.detailView .detailPanel .panelItem.on {
+  display: block;
 }
 .section.water.detailView .detailPanel .panelItem .titWrap {
   display: flex;
@@ -1651,8 +1659,12 @@ select {
   z-index: 999;
   padding: 16px;
   display: flex;
+  display: none;
   flex-direction: column;
   gap: 19px;
+}
+.section.water.detailView .panel04.on {
+  display: flex;
 }
 .section.water.detailView .panel04 h5 {
   font-weight: 700;
@@ -1732,6 +1744,7 @@ select {
   margin-bottom: 0;
 }
 .section.water.detailView .panel05 .panelItem {
+  display: none;
   background-color: rgba(23, 23, 23, 0.3);
   border-radius: 10px;
   backdrop-filter: blur(46px);
@@ -1740,6 +1753,9 @@ select {
   backdrop-filter: blur(60.8824px);
   padding: 14px;
   color: white;
+}
+.section.water.detailView .panel05 .panelItem.on {
+  display: block;
 }
 .section.water.detailView .panel05 .panelItem .titWrap {
   display: flex;
@@ -1832,12 +1848,24 @@ select {
   object-fit: contain;
 }
 .section.water.detailView .map_api .cycleWrap {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.1);
   width: 682px;
   height: 690px;
+}
+.section.water.detailView .map_api .cycleWrap.on {
+  display: block;
+}
+.section.water.detailView .map_api .cycleWrap.on .outterBox,
+.section.water.detailView .map_api .cycleWrap.on .innerBox {
+  display: block;
+}
+.section.water.detailView .map_api .cycleWrap .outterBox,
+.section.water.detailView .map_api .cycleWrap .innerBox {
+  display: none;
 }
 .section.water.detailView .map_api .cycleWrap .outterBox {
   width: 100%;
@@ -1959,6 +1987,30 @@ select {
 }
 .section.water.detailView .map_api .cycleWrap .on .arrow {
   background: url(../img/water/circle/cycle_arr_blue.svg);
+}
+
+.toggleMap {
+  background-color: rgba(23, 23, 23, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(46px);
+  padding: 16px;
+  display: none;
+  width: 200px;
+  margin-top: 10px;
+}
+.toggleMap.on {
+  display: block;
+}
+.toggleMap h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 14px;
+  color: #FED70C;
+  text-align: center;
+}
+.toggleMap img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=water.css.map */

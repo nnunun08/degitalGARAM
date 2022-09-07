@@ -1,0 +1,355 @@
+
+<html lang="ko">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+       <meta property="og:site_name" content=""/>
+       <meta property="og:title" content="Digital GARAM"/>
+       <meta property="og:description" content=""/>
+       <meta property="og:image" content="./img/sum.png" />
+       <title>Digital GARAM</title>
+       <link rel="stylesheet" href="./css/font.css">
+       <link rel="stylesheet" href="./css/common.css">
+       <link rel="stylesheet" href="./css/style.css">
+       <link rel="stylesheet" href="./css/circle-menu.css">
+       <link rel="stylesheet" href="./css/water.css">
+       <script src="./js/jquery-3.6.0.min.js"></script>
+       <script src="./js/main.js"></script>
+    </head>
+    <body>
+       <div id="main_map_wrap" class="">
+           <div class="map_info_area">
+               <h1><a href="./main.html" class="logo">Digital GARAM</a></h1>
+               <div class="left_icons top_ver">
+                   <div class="ico_link">
+                       <a href="#"><i class="ico-login"></i><span>로그인</span></a>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"><i class="ico-layer"></i><span>레이어</span></a>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"  class="link-b"><i class="ico-monitor"></i><span>모니터링</span></a>
+                       <div class="open_area">
+                           <h3><i class="ico-monitor-b"></i>모니터링<span class="close">닫기</span></h3>
+                           <ul class="snb_list">
+                               <li>
+                                   <a href="#">다목적댐 수문정보</a>
+                               </li>
+                               <li>
+                                   <a href="#">용수정용댐 수문정보</a>
+                               </li>
+                               <li>
+                                   <a href="#">보수문정보</a>
+                               </li>
+                               <li class="snb">
+                                   <a href="#">댐 - 하천 모식도</a>
+                                   <ul>
+                                       <li><a href="#">한강</a></li>
+                                       <li><a href="#">금강</a></li>
+                                       <li><a href="#">영산강</a></li>
+                                       <li><a href="#">섬진강</a></li>
+                                       <li><a href="#">낙동강</a></li>
+                                   </ul>
+                               </li>
+                               <li class="snb">
+                                   <a href="#">과거 수문자료조회</a>
+                                   <ul>
+                                       <li>
+                                           <div class="date_box">
+                                               <p>조회일시</p>
+                                               <input type="text" placeholder="YYYY-MM-DD HH:MI">
+                                               <button class="s_sch">검색하기</button>
+                                               <div class="formbox">
+                                                   <form></form>
+                                               </div>
+                                           </div>
+                                       </li>
+                                   </ul>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"  class="link-b"><i class="ico-flood"></i><span>홍수</span></a>
+                       <div class="open_area">
+                           <h3><i class="ico-flood-b"></i>홍수<span class="close">닫기</span></h3>
+                           <ul class="snb_list">
+                               <li>
+                                   <a href="#">댐수문</a>
+                                   <a href="#">하천수리</a>
+                                   <a href="#">강우유출</a>
+                                   <a href="#">염분분석</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"  class="link-b"><i class="ico-dry"></i><span>가뭄</span></a>
+                       <div class="open_area">
+                           <h3><i class="ico-dry-b"></i>가뭄<span class="close">닫기</span></h3>
+                           <ul class="snb_list">
+                               <li>
+                                   <a href="./drought.html">가뭄모니터링 및 전망</a>
+                                   <a href="#">수원별 가뭄 모니터링</a>
+                                   <a href="#">가뭄대응</a>
+                                   <a href="#">시뮬레이션</a>
+                               </li>
+                           </ul>
+   
+                       </div>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"  class="link-b"><i class="ico-cycle"></i><span>물순환</span></a>
+                       <div class="open_area">
+                           <h3><i class="ico-cycle-b"></i>물순환<span class="close">닫기</span></h3>
+                           <ul class="snb_list">
+                               <li>
+                                   <a href="./water_01.html">물이용</a>
+                                   <a href="./water_02.html">물순환</a>
+                                   <a href="./water_03.html">물수지</a>
+                                   <a href="#">물건전성</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"><i class="ico-cup"></i><span>수질</span></a>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"><i class="ico-dam"></i><span>댐안전</span></a>
+                   </div>
+               </div>
+   
+               <div class="left_icons bottom_ver">
+                   <div class="ico_link">
+                       <a href="#"><i class="ico-updt"></i><span>업데이트</span></a>
+                   </div>
+                   <div class="ico_link">
+                       <a href="#"><i class="ico-help"></i><span>도움말</span></a>
+                   </div>
+                   <div class="ico_link all_close_btn">
+                       <a href="#"><i class="ico-close"></i><span>닫기</span></a>
+                   </div>
+               </div>
+               <!-- /left_icons_btm -->
+           </div>
+   
+           <section class="section water detailView">
+               <div class="map_api_area">
+                    
+                    <!-- detailView 리뷰 임시 버튼 -->
+                    <div>
+                        <button id="detailViewToggle" style="position:absolute; top:0; left:50%; transform:translateX(-50%); background: rgba(255,255,255,0.3); color:white; border:0; z-index: 999;">test - detailViewToggle</button>
+                        <script type="text/javascript">
+                            document.querySelector('#detailViewToggle')
+                            .addEventListener('click', () => {
+                                document.querySelector('.water').classList.toggle('detailView');
+                            });
+                        </script>
+                    </div>
+                    <!-- detailView 리뷰 임시 버튼 -->
+
+                    <div class="map_top">
+                        <div class="i-s-box flexBox ">
+                            <form>
+                                <input type="text" placeholder="통합검색" class="ico-sch">
+                            </form>
+                            <div class="tab-box panelCont detailViewItem">
+                                <ul>
+                                    <li>
+                                        <a id="toggleBtn" onclick="toggleBtn()">하천모식도 </a>
+                                        <a id="cycleTrigger02">유량관측소</a>
+                                    </li>
+                                    <script>
+                                        function toggleBtn() {
+                                            document.getElementById('toggleMap').classList.toggle('on')
+                                            document.getElementById('toggleBtn').classList.toggle('on')
+                                        }
+                                    </script>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="miniMap on">
+                            <img class="on" src="./img/water/minimap/dummy04.png" alt="">
+                        </div>
+
+                        <div class="toggleMap" id="toggleMap">
+                            <h5>하천모식도-섬진강하류</h5>
+                            <img src="./img/water/toggleMap.png" alt="">
+                        </div>
+
+                        <div class="tab-box ver_r">
+                            <ul>
+                                <li class="searchWrap">
+                                    <div class="calendarWrap">
+                                        <h5>기간 조회</h5>
+                                        <div class="fromToWrap">
+                                            <div class="calendar">
+                                                <label for="calendar">
+                                                    <i></i>
+                                                    <input id="calendar" type="date" name="calendar" placeholder="시작 일시">
+                                                </label>
+                                            </div>
+                                            <div class="calendar">
+                                                <label for="calendar">
+                                                    <i></i>
+                                                    <input id="calendar" type="date" name="calendar" placeholder="마지막 일시">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button onclick="panel05()">검색</button>
+                                    </div>
+                                </li>
+                                <li class="in_box">
+                                    <span class="ico-time">8월 15일 (토) 3:14PM</span>
+                                </li>
+                                <li class="in_box">
+                                    <span class="ico-sunny">최고 31°	/ 최저 26°</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /map_top -->
+
+                    <div class="map_right">
+                        <div class="icon-box">
+                            <a href="#" title="리셋" class="ico-reset"><i>리셋</i></a>
+                            <a href="#" title="이동" class="ico-move"><i>이동</i></a>
+                            <a href="#" title="" class="ico-move2"><i>이동</i></a>
+                            <a href="#" title="" class="ico-grp"><i>그래프</i></a>
+                            <a href="#" title="" class="ico-area"><i>면적</i></a>
+                            <a href="#" title="" class="ico-distance"><i>거리</i></a>
+                            <a href="#" title="" class="ico-point"><i>포인트</i></a>
+                            <a href="#" title="" class="ico-memo"><i>메모</i></a>
+                        </div>
+                        <div class="icon-box">
+                            <a href="#" title="" class="ico-compass"><i>나침판</i></a>
+                            <a href="#" title="" class="ico-zooin"><i>확대</i></a>
+                            <a href="#" title="" class="ico-zoout"><i>축소</i></a>
+                            <a href="#" title="" class="ico-earth"><i>항공뷰</i></a>
+                            <a href="#" title="" class="ico-2D"><i>2D</i></a>
+                            <a href="#" title="" class="ico-3D"><i>3D</i></a>
+                        </div>
+                    </div>
+                    <!-- /map_right -->
+
+                    <div class="panel05 detailViewItem">
+                        <div class="panelItem" id="panel05">
+                            <div class="titWrap">
+                                <h5>4009 섬진강하류</h5>
+                                <button>다운로드</button>
+                            </div>
+                            <div class="table">
+                                <div class="left">
+                                    <div class="tit">구분</div>
+                                    <div>AAAA</div>
+                                    <div>AAAA</div>
+                                    <div>AAAA</div>
+                                    <div>AAAA</div>
+                                    <div>AAAA</div>
+                                    <div>AAAA</div>
+                                </div>
+                                <div class="divider">
+                                    <div></div>
+                                </div>
+                                <div class="right">
+                                    <div class="tit">수량</div>
+                                    <div><span>00000</span></div>
+                                    <div><span>00000</span></div>
+                                    <div><span>00000</span></div>
+                                    <div><span>00000</span></div>
+                                    <div><span>00000</span></div>
+                                    <div><span>00000</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function panel05() {
+                                document.getElementById('panel05').classList.toggle('on');
+                            }
+                        </script>
+                    </div>
+
+                    <div class="panel04 water03 detailViewItem" style="top:auto;bottom:108px;left:50%;transform:translateX(-50%);" id="panel04">
+                        <div class="flex">
+                            <h5>송정수위표</h5>
+                            <button class="exportBtn">다운로드</button>
+                        </div>
+                        <div class="graph">
+                            <img src="./img/water/dummy_graph_panel_04.png" alt="">
+                        </div> 
+                        <script>
+                            function panel04() {
+                                document.getElementById('panel04').classList.toggle('on');
+                            }
+                        </script>
+                    </div>
+
+                    <script>
+
+                    </script>
+
+                    <div class="map_bottom">
+                        <div class="flexBox area02 ver_noList">
+
+                            <!-- detailView 좌하단 패널 -->
+                            <div class="damListIcon detailViewItem">
+                                <ul>
+                                    <li class="dam01 ac"><img src="./img/water/damList/ico-dam01.png" alt=""><span>다목적댐</span></li>
+                                    <li class="dam02"><img src="./img/water/damList/ico-dam02.png" alt=""><span>발전댐</span></li>
+                                    <li class="dam03"><img src="./img/water/damList/ico-dam03.png" alt=""><span>농업용댐</span></li>
+                                    <li class="dam04"><img src="./img/water/damList/ico-dam04.png" alt=""><span>용수댐</span></li>
+                                    <li class="dam05"><img src="./img/water/damList/ico-dam05.png" alt=""><span>하수처리장</span></li>
+                                    <li class="dam05"><img src="./img/water/damList/ico-dam06.png" alt=""><span>취수장</span></li>
+                                    <li class="dam05"><img src="./img/water/damList/ico-dam07.png" alt=""><span>유량관측소</span></li>
+                                    <li class="dam05"><img src="./img/water/damList/ico-dam08.png" alt=""><span>수위관측소</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-box bottom_r">
+                                <ul>
+                                    <li class="in_box">
+                                        <span class="ico-map">전북 순창군 동계면 어치리</span>
+                                        <span class="ico-loc">35’9.89’ - 6.7463”<b class="blue">N</b></span>
+                                        <span>-82’30.00’0.0000<b class="blue">E</b></span>
+                                        <span>26889486.19m <b class="blue">elev</b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /map_bottom -->
+                    <div class="map_api">
+                        <div class="damPosition">
+                            <div class="dam red ac" style="left: 54%; top:500px">
+                                <img src="./img/water/damList/ico-dam01.png" alt="">
+                                <div class="popInfo"><span>2,015.4</span></div>
+                            </div>
+                            <div class="dam" style="left: 58%; top:329px">
+                                <img src="./img/water/damList/ico-dam01.png" alt="">
+                                <div class="popInfo"><span>2,015.4</span></div>
+                            </div>
+                            <div class="dam" style="left: 65%; top:523px">
+                                <img src="./img/water/damList/ico-dam04.png" alt="">
+                                <div class="popInfo"><span>2,015.4</span></div>
+                            </div>
+                            <div class="dam" style="left: 74%; top:550px">
+                                <img src="./img/water/damList/ico-dam04.png" alt="">
+                                <div class="popInfo"><span>2,015.4</span></div>
+                            </div>
+                        </div>
+
+                        <div class="detailBg" onclick="panel04()">
+                            <img src="./img/water/water_bg_dummy05.jpg" alt="" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+           </section>
+       </div>
+        <script src="./js/circleMenu.min.js"></script>
+   
+    </body>
+   </html>
+   

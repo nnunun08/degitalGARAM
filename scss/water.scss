@@ -248,6 +248,10 @@
             // top: 348px;
             // left: 14px;
             // z-index: 999;
+            display: none;
+                &.on {
+                    display: block;
+                }
             margin-top: 31px;
             width: 580px;
             box-sizing: border-box;
@@ -422,6 +426,10 @@
                 @include transTray;
                 padding: 12px;
                 padding-bottom: 8px;
+                display: none;
+                &.on {
+                    display: block;
+                }
                 .titWrap {
                     display: flex;
                     align-items: center;
@@ -487,12 +495,16 @@
 
         .panel04 {
             @include transTray;
+            &.on {
+                display: flex;
+            }
             position: absolute;
             left: 0;
             top: 333px;
             z-index: 999;
             padding: 16px;
             display: flex;
+            display: none;
             flex-direction: column;
             gap: 19px;
             h5 {
@@ -555,6 +567,10 @@
                 }
             }
             .panelItem { 
+                display: none;
+                &.on {
+                    display: block;
+                }
                 @include transTray;
                 min-width: 350px;
                 background-color: rgba(255, 255, 255, 0.2);
@@ -655,12 +671,24 @@
         }
         .map_api {
             .cycleWrap {
+                display: none;
+                &.on {
+                    display: block;
+                    .outterBox,
+                    .innerBox {
+                        display: block;
+                    }
+                }
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%) scale(1.1);
                 width: 682px;
                 height: 690px;
+                .outterBox,
+                .innerBox {
+                    display: none;
+                }
                 .outterBox {
                     width: 100%;
                     height: 100%;    
@@ -764,3 +792,27 @@
     
 }
 
+
+
+.toggleMap {
+
+    @include transTray;
+    padding: 16px;
+    display: none;
+    &.on {
+        display: block;
+    }
+    width: 200px;
+    margin-top:10px;
+    h5 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 14px;
+        color: #FED70C;
+        text-align: center;
+    }
+    img {
+        width: 100%;
+    }
+}

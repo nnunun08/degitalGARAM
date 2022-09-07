@@ -134,7 +134,7 @@
                <!-- /left_icons_btm -->
            </div>
    
-           <section class="section water detailView">
+           <section class="section water">
                 <div class="map_api_area">
 
                     <!-- detailView 리뷰 임시 버튼 -->
@@ -170,16 +170,33 @@
                         <div class="tab-box ver2">
                             <ul>
                                 <li>
-                                    <a href="#" class="on">시/군/구</a>
+                                    <!-- <a href="#" class="on">시/도</a> -->
+                                    <a id="miniMapBtn">시/도</a>
                                     <a href="#">대권역</a>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="miniMap">
-                            <img class="on" src="./img/water/minimap/dummy01.png" alt="">
-                            <img src="./img/water/minimap/dummy02.png" alt="">
+                        <div class="miniMap" id="miniMap">
+                            <a href="./water_01_1.html"><img id="miniMap01" class="on" src="./img/water/minimap/dummy01.png" alt=""></a>
                         </div>
+
+                        <script>
+                            document.getElementById('miniMapBtn').addEventListener('click',() => {    
+                                const miniMap = document.getElementById('miniMap');
+                                const water = document.getElementById('waterStorage');
+                                miniMap.classList.toggle('on');
+                                water.classList.toggle('on');
+                            })
+                            const miniMap = document.getElementById('miniMap');
+                            miniMap.addEventListener('click', () => {
+                                const item01 = document.getElementById('miniMap01');
+                                const item02 = document.getElementById('miniMap02');
+                                item01.classList.toggle('on');
+                                item02.classList.toggle('on');
+                                console.log('click')
+                            })
+                        </script>
 
                         <div class="tab-box ver_r">
                             <ul>
@@ -423,7 +440,7 @@
                     <!-- /map_right -->
                     <div class="map_bottom">
                         <div class="flexBox area02 ver_noList">
-                            <div class="waterStorage">
+                            <div class="waterStorage" id="waterStorage">
                                 <div class="flexBox top">
                                     <h4>수자원시설 저수현황</h4>
                                     <div class="toggleBtn">

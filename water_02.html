@@ -134,12 +134,12 @@
                <!-- /left_icons_btm -->
            </div>
    
-           <section class="section water detailView">
+           <section class="section water">
                 <div class="map_api_area">
 
                     <!-- detailView 리뷰 임시 버튼 -->
                     <div>
-                        <button id="detailViewToggle" style="position:absolute; top:0; left:50%; transform:translateX(-50%); background: rgba(255,255,255,0.3); color:white; border:0; z-index: 999;">test - detailViewToggle</button>
+                        <!-- <button id="detailViewToggle" style="position:absolute; top:0; left:50%; transform:translateX(-50%); background: rgba(255,255,255,0.3); color:white; border:0; z-index: 999;">test - detailViewToggle</button> -->
                         <script type="text/javascript">
                             document.querySelector('#detailViewToggle')
                             .addEventListener('click', () => {
@@ -156,9 +156,8 @@
                             </form>
                         </div>
 
-                        <div class="miniMap">
-                            <img src="./img/water/minimap/dummy03.png" alt="">
-                            <img class="on" src="./img/water/minimap/dummy04.png" alt="">
+                        <div class="miniMap on" id="miniMap">
+                            <a href="./water_02_1.html"><img id="miniMap01" class="on" src="./img/water/minimap/dummy03.png" alt=""></a>
                         </div>
 
                         <div class="tab-box ver_r">
