@@ -682,6 +682,7 @@ $leftSide : 200px;
   width: calc(100% - 14px - 36px - 230px);
 }
 .map_api_area .tab-box li a {
+  cursor: pointer;
   display: inline-flex;
   color: #a0a0a0;
   padding: 0 15px;

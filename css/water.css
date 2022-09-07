@@ -1862,19 +1862,22 @@ select {
 .section.water.detailView .map_api .cycleWrap.on {
   display: block;
 }
-.section.water.detailView .map_api .cycleWrap.on .outterBox,
-.section.water.detailView .map_api .cycleWrap.on .innerBox {
-  display: block;
-}
 .section.water.detailView .map_api .cycleWrap .outterBox,
 .section.water.detailView .map_api .cycleWrap .innerBox {
   display: none;
 }
+.section.water.detailView .map_api .cycleWrap .outterBox.on,
+.section.water.detailView .map_api .cycleWrap .innerBox.on {
+  display: block;
+}
 .section.water.detailView .map_api .cycleWrap .outterBox {
   width: 100%;
   height: 100%;
-  border: 4px solid #FFFFFF;
+  border: 4px solid #72AAFF;
   border-radius: 30px;
+}
+.section.water.detailView .map_api .cycleWrap .outterBox .arrow {
+  background: url(../img/water/circle/cycle_arr_blue.svg);
 }
 .section.water.detailView .map_api .cycleWrap .outterBox .arrow.right {
   right: -25px;
@@ -1882,9 +1885,9 @@ select {
 .section.water.detailView .map_api .cycleWrap .outterBox .arrow.bottom {
   bottom: -16px;
 }
-.section.water.detailView .map_api .cycleWrap .on.outterBox,
-.section.water.detailView .map_api .cycleWrap .on.innerBox {
-  border: 4px solid #72AAFF;
+.section.water.detailView .map_api .cycleWrap .outterBox .tit {
+  color: white;
+  background-color: #4089F7;
 }
 .section.water.detailView .map_api .cycleWrap .innerBox {
   position: absolute;
@@ -1924,10 +1927,6 @@ select {
   transform: translateX(-50%);
   background-color: white;
   color: #4089F7;
-}
-.section.water.detailView .map_api .cycleWrap .on .tit {
-  color: white;
-  background-color: #4089F7;
 }
 .section.water.detailView .map_api .cycleWrap .graph01 {
   top: 30px;
@@ -1987,9 +1986,6 @@ select {
   right: 103px;
   bottom: -13px;
   transform: rotate(90deg);
-}
-.section.water.detailView .map_api .cycleWrap .on .arrow {
-  background: url(../img/water/circle/cycle_arr_blue.svg);
 }
 
 .toggleMap {

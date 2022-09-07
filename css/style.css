@@ -1785,6 +1785,7 @@ select {
 }
 
 .map_api_area .tab-box li a {
+  cursor: pointer;
   display: inline-flex;
   color: #a0a0a0;
   padding: 0 15px;

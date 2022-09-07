@@ -154,39 +154,6 @@
                                         <a id="cycleTrigger01" onclick="cycleTrigger1()">자연계 </a>
                                         <a id="cycleTrigger02" onclick="cycleTrigger2()">인공계</a>
                                     </li>
-                                    <script>
-                                        function cycleTrigger1() {
-                                            const wrap1 = document.getElementById('cycleWrap1');
-                                            const wrap2 = document.getElementById('cycleWrap2');
-                                            const target01 = document.getElementById('outterBox');
-                                            const target02 = document.getElementById('innerBox');
-                                            const trigger1 = document.getElementById('cycleTrigger01');
-                                            const trigger2 = document.getElementById('cycleTrigger02');
-                                            trigger1.classList.add('on')
-                                            trigger2.classList.remove('on')
-                                            wrap1.classList.add('on');
-                                            wrap2.classList.remove('on');
-                                            const panel = document.querySelectorAll('.panelItem')
-                                            panel[0].classList.add('on')
-                                            panel[1].classList.add('on')
-                                        }
-                                        function cycleTrigger2() {
-                                            const wrap1 = document.getElementById('cycleWrap1');
-                                            const wrap2 = document.getElementById('cycleWrap2');
-                                            const target01 = document.getElementById('outterBox');
-                                            const target02 = document.getElementById('innerBox');
-                                            const trigger1 = document.getElementById('cycleTrigger01');
-                                            const trigger2 = document.getElementById('cycleTrigger02');
-                                            trigger2.classList.add('on')
-                                            trigger1.classList.remove('on')
-                                            wrap2.classList.add('on');
-                                            wrap1.classList.remove('on');
-                                            const panel = document.querySelectorAll('.panelItem')
-                                            panel[0].classList.add('on')
-                                            panel[1].classList.add('on')
-                                        }
-
-                                    </script>
                                 </ul>
                             </div>
                         </div>
@@ -376,32 +343,17 @@
                     <!-- /map_bottom -->
                     <div class="map_api" id="map_api">
                         <div class="detailBg detailViewItem">
-                            <img src="./img/water/water_bg_dummy04.jpg" alt="" id="bgMap">
+                            <img src="./img/water/water_bg_dummy04.jpg" alt="" id="bgMap" style="cursor: pointer;">
                         </div>
 
-                        <script>
-                            document.getElementById('bgMap').addEventListener('click', () => {
-                                const wrap1 = document.getElementById('cycleWrap1');
-                                const wrap2 = document.getElementById('cycleWrap2');
-                                const trigger1 = document.getElementById('cycleTrigger01');
-                                const trigger2 = document.getElementById('cycleTrigger02');
-                                trigger1.classList.remove('on')
-                                trigger2.classList.remove('on')
-                                wrap1.classList.remove('on');
-                                wrap2.classList.remove('on');
-                                document.getElementById('panel04').classList.toggle('on')
+                        
 
-                                const panel = document.querySelectorAll('.panelItem')
-                                panel[0].classList.remove('on')
-                                panel[1].classList.remove('on')
-                            })
-                        </script>
 
                         <div class="">
                             <img src="./img/water/water_bg_dummy02_1.jpg" alt="">
                         </div>
 
-                        <div class="cycleWrap detailViewItem" id="cycleWrap1">
+                        <div class="cycleWrap detailViewItem cyclewrap1">
                             <div class="outterBox on" id="outterBox">
                                 <div class="tit">
                                     자연계 물순환
@@ -415,33 +367,9 @@
                                 <span class="arrow right"></span>
                                 <span class="arrow bottom"></span>
                             </div>
-                            <div class="innerBox" id-="innerBox">
-                                <div class="tit">
-                                    인공계 물순환
-                                </div>
-                                <div class="graph06"><img src="./img/water/circle/graph06.png" alt=""></div>
-                                <div class="graph07"><img src="./img/water/circle/graph07.png" alt=""></div>
-                                <div class="graph08"><img src="./img/water/circle/graph08.png" alt=""></div>
-                                <div class="graph09"><img src="./img/water/circle/graph09.png" alt=""></div>
-                                <span class="arrow right"></span>
-                                <span class="arrow bottom"></span>
-                            </div>
                         </div>
 
-                        <div class="cycleWrap detailViewItem" id="cycleWrap2">
-                            <div class="outterBox" id="outterBox">
-                                <div class="tit">
-                                    자연계 물순환
-                                </div>
-                                <div class="graph01"><img src="./img/water/circle/graph01.png" alt=""></div>
-                                <div class="graph02"><img src="./img/water/circle/graph02.png" alt=""></div>
-                                <div class="graph03"><img src="./img/water/circle/graph03.png" alt=""></div>
-                                <div class="graph04"><img src="./img/water/circle/graph04.png" alt=""></div>
-                                <div class="graph05"><img src="./img/water/circle/graph05.png" alt=""></div>
-                                <span class="arrow left"></span>
-                                <span class="arrow right"></span>
-                                <span class="arrow bottom"></span>
-                            </div>
+                        <div class="cycleWrap detailViewItem cyclewrap2">
                             <div class="innerBox on" id-="innerBox">
                                 <div class="tit">
                                     인공계 물순환
@@ -454,6 +382,7 @@
                                 <span class="arrow bottom"></span>
                             </div>
                         </div>
+
                     </div>
                 </div>
            </section>
@@ -463,6 +392,52 @@
          var el = '.js-menu';
         //  var myMenu = cssCircleMenu(el);
        </script>
+
+        <script>
+            const trigger1 = document.getElementById('cycleTrigger01');
+            const trigger2 = document.getElementById('cycleTrigger02');
+            const outterBox = document.getElementById('outterBox');
+            const innterbox = document.getElementById('innerBox');
+            const panel = document.querySelectorAll('.panelItem')
+
+            document.getElementById('bgMap').addEventListener('click', () => {
+                const trigger1 = document.getElementById('cycleTrigger01');
+                const trigger2 = document.getElementById('cycleTrigger02');
+                document.getElementById('panel04').classList.toggle('on')
+                
+                trigger1.classList.remove('on');
+                trigger2.classList.remove('on');
+
+                panel[0].classList.remove('on')
+                panel[1].classList.remove('on')
+            })
+
+            function cycleTrigger1() {
+                const wrapper1 = document.querySelector('.cycleWrap1');
+                wrapper1.classList.toggle('on');
+
+                // 버튼 토글
+                const trigger1 = document.getElementById('cycleTrigger01');
+                trigger1.classList.toggle('on');
+
+                // panel 토글
+                const panel = document.querySelectorAll('.panelItem');
+                panel[0].classList.toggle('on')
+            }
+
+            function cycleTrigger2() {
+                const wrapper2 = document.querySelector('.cycleWrap2');
+                wrapper2.classList.toggle('on');
+
+                // 버튼 토글
+                const trigger2 = document.getElementById('cycleTrigger02');
+                trigger2.classList.toggle('on');
+
+                // panel 토글
+                const panel = document.querySelectorAll('.panelItem');
+                panel[1].classList.toggle('on')
+            }
+        </script>
    
     </body>
    </html>

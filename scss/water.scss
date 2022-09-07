@@ -678,10 +678,6 @@
                 display: none;
                 &.on {
                     display: block;
-                    .outterBox,
-                    .innerBox {
-                        display: block;
-                    }
                 }
                 position: absolute;
                 top: 50%;
@@ -692,13 +688,17 @@
                 .outterBox,
                 .innerBox {
                     display: none;
+                    &.on {
+                        display: block;
+                    }
                 }
                 .outterBox {
                     width: 100%;
                     height: 100%;    
-                    border: 4px solid #FFFFFF;
+                    border: 4px solid #72AAFF;
                     border-radius: 30px;
                     .arrow {
+                        background: url(../img/water/circle/cycle_arr_blue.svg);
                         &.right {
                             right: -25px;
                         }
@@ -706,10 +706,10 @@
                             bottom: -16px;
                         }
                     }
-                }
-                .on.outterBox,
-                .on.innerBox {
-                    border: 4px solid #72AAFF;
+                    .tit {
+                        color: white;
+                        background-color: #4089F7;
+                    }
                 }
                 .innerBox {
                     position: absolute;
@@ -750,10 +750,6 @@
                     background-color: white;
                     color: #4089F7;
                 }
-                .on .tit {
-                    color: white;
-                    background-color: #4089F7;
-                }
                 .graph01 {top: 30px;left: -40px;}
                 .graph02 {bottom: 41px;left: -40px;}
                 .graph03 {bottom: -52px;left: 50%; transform: translateX(-50%);}
@@ -784,9 +780,6 @@
                         bottom: -13px;
                         transform: rotate(90deg);
                     }
-                }
-                .on .arrow {
-                    background: url(../img/water/circle/cycle_arr_blue.svg);
                 }
             }
 
