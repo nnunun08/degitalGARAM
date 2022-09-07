@@ -1274,6 +1274,9 @@ select {
   background: rgba(23, 23, 23, 0.3);
   backdrop-filter: blur(46px);
   border-radius: 10px;
+  transform: scale(0.9);
+  margin-top: -25px;
+  margin-left: -29px;
 }
 .section.water.detailView .damReport.on {
   display: block;
